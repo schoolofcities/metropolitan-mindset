@@ -1,7 +1,6 @@
 <script>
 
     import "../assets/global.css"
-
     import { onMount } from 'svelte'
 	import mapboxgl from "mapbox-gl";
 
@@ -10,9 +9,9 @@
 	onMount(() => {
 		map = new mapboxgl.Map({
 			container: 'map', 
-			style: 'mapbox://styles/schoolofcities/cli0otj3n04m601pa9s0s0mc4',
-			center: [-79.45, 43.65], 
-			zoom: 10,
+			style: 'mapbox://styles/schoolofcities/cllwjnzlf016j01p71qq5eskt',
+			center: [-79.6, 43.9], 
+			zoom: 9,
 			maxZoom: 12,
 			minZoom: 5,
 			projection: 'globe',
