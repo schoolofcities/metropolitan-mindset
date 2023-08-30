@@ -166,9 +166,9 @@
 
 			<p>
 				Number of Municipalities: {filteredData["Total_Number_of_Municipalities"]}<br>
-				Total Land Area (sq.km): {filteredData["Land_Area_(sq_km)"]}<br>
-				GDP (2019) in mllions: ${filteredData["GDP_2019_(millions)"]}<br>
-				Population (2021): {filteredData["Population_2021"]}<br>
+				Total Land Area (sq.km): {Math.round(filteredData["Land_Area_(sq_km)"]).toLocaleString()}<br>
+				GDP (2019) in mllions: ${Math.round(filteredData["GDP_2019_(millions)"]).toLocaleString()}<br>
+				Population (2021): {Math.round(filteredData["Population_2021"]).toLocaleString()}<br>
 				% of Population in Central City: {filteredData["Proportion_of_Population_In_Central"]}%
 				
 				
