@@ -128,8 +128,6 @@
 				<input type="checkbox" on:change={toggleMunicipal} checked>
 				Municipal Borders
 			</h2>
-
-			
 		</div>     
 
         <div id="content-wrapper" style="display: {isContentVisible ? 'block' : 'none'};">
@@ -170,8 +168,6 @@
 				GDP (2019) in mllions: ${Math.round(filteredData["GDP_2019_(millions)"]).toLocaleString()}<br>
 				Population (2021): {Math.round(filteredData["Population_2021"]).toLocaleString()}<br>
 				% of Population in Central City: {filteredData["Proportion_of_Population_In_Central"]}%
-				
-				
 			</p>
 
 			<p>
@@ -227,7 +223,6 @@
 	:global(body) {
 		padding: 0px;
 		margin: 0px;
-		background-color: var(--brandDarkBlue);
 	}
 	
 	main {
@@ -242,7 +237,6 @@
 		position: absolute;
 		z-index: -99;
 	}
-
 
     h1 {
         font-size: 24px;
@@ -325,5 +319,4 @@
 		accent-color: var(--brandPink);  
 	}
 
-	
 </style>
