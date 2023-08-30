@@ -1,7 +1,7 @@
 [
  {
    "Rank": 1,
-   "CMAID": 535,
+   "CMAUID": 535,
    "CMANAME": "Toronto",
    "Population_2021": 6202225,
    "Dwellings_2021": 2394205,
@@ -16,11 +16,13 @@
    "Central_City_CSDNAME": "Toronto",
    "CSDTYPE": "C",
    "Central_City_Population_2021": 2794356,
-   "Land_Area_(sq_km)": 5902.7
+   "Land_Area_(sq_km)": 5902.7,
+   "x": -79.58,
+   "y": 43.90
  },
  {
    "Rank": 2,
-   "CMAID": 462,
+   "CMAUID": 462,
    "CMANAME": "Montréal",
    "Population_2021": 4291732,
    "Dwellings_2021": 1929263,
@@ -35,11 +37,13 @@
    "Central_City_CSDNAME": "Montréal",
    "CSDTYPE": "V",
    "Central_City_Population_2021": 1762949,
-   "Land_Area_(sq_km)": 4670.1
+   "Land_Area_(sq_km)": 4670.1,
+   "x": -73.70474439,
+   "y": 45.57714311
  },
  {
    "Rank": 3,
-   "CMAID": 933,
+   "CMAUID": 933,
    "CMANAME": "Vancouver",
    "Population_2021": 2642825,
    "Dwellings_2021": 1104532,
@@ -54,11 +58,13 @@
    "Central_City_CSDNAME": "Vancouver",
    "CSDTYPE": "CY",
    "Central_City_Population_2021": 662248,
-   "Land_Area_(sq_km)": 2878.9
+   "Land_Area_(sq_km)": 2878.9,
+   "x": -122.8360663,
+   "y": 49.28271522
  },
  {
    "Rank": 4,
-   "CMAID": 505,
+   "CMAUID": 505,
    "CMANAME": "Ottawa - Gatineau",
    "Population_2021": 1488307,
    "Dwellings_2021": 638013,
@@ -73,11 +79,13 @@
    "Central_City_CSDNAME": "Ottawa",
    "CSDTYPE": "CV",
    "Central_City_Population_2021": 1017449,
-   "Land_Area_(sq_km)": 8047
+   "Land_Area_(sq_km)": 8047,
+   "x": -75.82783297,
+   "y": 45.27261538
  },
  {
    "Rank": 5,
-   "CMAID": 825,
+   "CMAUID": 825,
    "CMANAME": "Calgary",
    "Population_2021": 1481806,
    "Dwellings_2021": 594513,
@@ -92,11 +100,13 @@
    "Central_City_CSDNAME": "Calgary",
    "CSDTYPE": "CY",
    "Central_City_Population_2021": 1306784,
-   "Land_Area_(sq_km)": 5098.7
+   "Land_Area_(sq_km)": 5098.7,
+   "x": -114.0781257,
+   "y": 51.18077945
  },
  {
    "Rank": 6,
-   "CMAID": 835,
+   "CMAUID": 835,
    "CMANAME": "Edmonton",
    "Population_2021": 1418118,
    "Dwellings_2021": 589554,
@@ -111,11 +121,13 @@
    "Central_City_CSDNAME": "Edmonton",
    "CSDTYPE": "CY",
    "Central_City_Population_2021": 1010899,
-   "Land_Area_(sq_km)": 9416.2
+   "Land_Area_(sq_km)": 9416.2,
+   "x": -113.7884675,
+   "y": 53.51319328
  },
  {
    "Rank": 7,
-   "CMAID": 421,
+   "CMAUID": 421,
    "CMANAME": "Québec",
    "Population_2021": 839311,
    "Dwellings_2021": 411415,
@@ -130,11 +142,13 @@
    "Central_City_CSDNAME": "Québec",
    "CSDTYPE": "V",
    "Central_City_Population_2021": 549459,
-   "Land_Area_(sq_km)": 3499.5
+   "Land_Area_(sq_km)": 3499.5,
+   "x": -71.34189993,
+   "y": 46.91263204
  },
  {
    "Rank": 8,
-   "CMAID": 602,
+   "CMAUID": 602,
    "CMANAME": "Winnipeg",
    "Population_2021": 834678,
    "Dwellings_2021": 347144,
@@ -149,11 +163,13 @@
    "Central_City_CSDNAME": "Winnipeg",
    "CSDTYPE": "CY",
    "Central_City_Population_2021": 749607,
-   "Land_Area_(sq_km)": 5285.5
+   "Land_Area_(sq_km)": 5285.5,
+   "x": -97.04814617,
+   "y": 49.88738995
  },
  {
    "Rank": 9,
-   "CMAID": 537,
+   "CMAUID": 537,
    "CMANAME": "Hamilton",
    "Population_2021": 785184,
    "Dwellings_2021": 320081,
@@ -168,11 +184,13 @@
    "Central_City_CSDNAME": "Hamilton",
    "CSDTYPE": "C",
    "Central_City_Population_2021": 569353,
-   "Land_Area_(sq_km)": 1373.1
+   "Land_Area_(sq_km)": 1373.1,
+   "x": -79.92584989,
+   "y": 43.26608973
  },
  {
    "Rank": 10,
-   "CMAID": 541,
+   "CMAUID": 541,
    "CMANAME": "Kitchener - Cambridge - Waterloo",
    "Population_2021": 575847,
    "Dwellings_2021": 229809,
@@ -187,11 +205,13 @@
    "Central_City_CSDNAME": "Kitchener",
    "CSDTYPE": "CY",
    "Central_City_Population_2021": 256885,
-   "Land_Area_(sq_km)": 1092.3
+   "Land_Area_(sq_km)": 1092.3,
+   "x": -80.49086067,
+   "y": 43.44191534
  },
  {
    "Rank": 11,
-   "CMAID": 555,
+   "CMAUID": 555,
    "CMANAME": "London",
    "Population_2021": 543551,
    "Dwellings_2021": 235522,
@@ -210,7 +230,7 @@
  },
  {
    "Rank": 12,
-   "CMAID": 205,
+   "CMAUID": 205,
    "CMANAME": "Halifax",
    "Population_2021": 465703,
    "Dwellings_2021": 211789,
@@ -229,7 +249,7 @@
  },
  {
    "Rank": 13,
-   "CMAID": 539,
+   "CMAUID": 539,
    "CMANAME": "St. Catharines - Niagara",
    "Population_2021": 433604,
    "Dwellings_2021": 190878,
@@ -248,7 +268,7 @@
  },
  {
    "Rank": 14,
-   "CMAID": 559,
+   "CMAUID": 559,
    "CMANAME": "Windsor",
    "Population_2021": 422630,
    "Dwellings_2021": 174072,
@@ -267,7 +287,7 @@
  },
  {
    "Rank": 15,
-   "CMAID": 532,
+   "CMAUID": 532,
    "CMANAME": "Oshawa",
    "Population_2021": 415311,
    "Dwellings_2021": 153565,
@@ -286,7 +306,7 @@
  },
  {
    "Rank": 16,
-   "CMAID": 935,
+   "CMAUID": 935,
    "CMANAME": "Victoria",
    "Population_2021": 397237,
    "Dwellings_2021": 186674,
@@ -305,7 +325,7 @@
  },
  {
    "Rank": 17,
-   "CMAID": 725,
+   "CMAUID": 725,
    "CMANAME": "Saskatoon",
    "Population_2021": 317480,
    "Dwellings_2021": 134720,
@@ -324,7 +344,7 @@
  },
  {
    "Rank": 18,
-   "CMAID": 705,
+   "CMAUID": 705,
    "CMANAME": "Regina",
    "Population_2021": 249217,
    "Dwellings_2021": 108120,
@@ -343,7 +363,7 @@
  },
  {
    "Rank": 19,
-   "CMAID": 433,
+   "CMAUID": 433,
    "CMANAME": "Sherbrooke",
    "Population_2021": 227398,
    "Dwellings_2021": 113325,
@@ -362,7 +382,7 @@
  },
  {
    "Rank": 20,
-   "CMAID": 915,
+   "CMAUID": 915,
    "CMANAME": "Kelowna",
    "Population_2021": 222162,
    "Dwellings_2021": 102097,
@@ -381,7 +401,7 @@
  },
  {
    "Rank": 21,
-   "CMAID": 568,
+   "CMAUID": 568,
    "CMANAME": "Barrie",
    "Population_2021": 212856,
    "Dwellings_2021": 82649,
@@ -400,7 +420,7 @@
  },
  {
    "Rank": 22,
-   "CMAID": 1,
+   "CMAUID": 1,
    "CMANAME": "St. John's",
    "Population_2021": 212579,
    "Dwellings_2021": 97429,
@@ -419,7 +439,7 @@
  },
  {
    "Rank": 23,
-   "CMAID": 932,
+   "CMAUID": 932,
    "CMANAME": "Abbotsford - Mission",
    "Population_2021": 195726,
    "Dwellings_2021": 70648,
@@ -438,7 +458,7 @@
  },
  {
    "Rank": 24,
-   "CMAID": 521,
+   "CMAUID": 521,
    "CMANAME": "Kingston",
    "Population_2021": 172546,
    "Dwellings_2021": 80955,
@@ -457,7 +477,7 @@
  },
  {
    "Rank": 25,
-   "CMAID": 580,
+   "CMAUID": 580,
    "CMANAME": "Greater Sudbury / Grand Sudbury",
    "Population_2021": 170605,
    "Dwellings_2021": 78225,
@@ -476,7 +496,7 @@
  },
  {
    "Rank": 26,
-   "CMAID": 550,
+   "CMAUID": 550,
    "CMANAME": "Guelph",
    "Population_2021": 165588,
    "Dwellings_2021": 67685,
@@ -495,7 +515,7 @@
  },
  {
    "Rank": 27,
-   "CMAID": 408,
+   "CMAUID": 408,
    "CMANAME": "Saguenay",
    "Population_2021": 161567,
    "Dwellings_2021": 79976,
@@ -514,7 +534,7 @@
  },
  {
    "Rank": 28,
-   "CMAID": 442,
+   "CMAUID": 442,
    "CMANAME": "Trois-Rivières",
    "Population_2021": 161489,
    "Dwellings_2021": 80767,
@@ -533,7 +553,7 @@
  },
  {
    "Rank": 29,
-   "CMAID": 305,
+   "CMAUID": 305,
    "CMANAME": "Moncton",
    "Population_2021": 157717,
    "Dwellings_2021": 70460,
@@ -552,7 +572,7 @@
  },
  {
    "Rank": 30,
-   "CMAID": 543,
+   "CMAUID": 543,
    "CMANAME": "Brantford",
    "Population_2021": 144162,
    "Dwellings_2021": 58047,
@@ -571,7 +591,7 @@
  },
  {
    "Rank": 31,
-   "CMAID": 310,
+   "CMAUID": 310,
    "CMANAME": "Saint John",
    "Population_2021": 130613,
    "Dwellings_2021": 59272,
@@ -590,7 +610,7 @@
  },
  {
    "Rank": 32,
-   "CMAID": 529,
+   "CMAUID": 529,
    "CMANAME": "Peterborough",
    "Population_2021": 128624,
    "Dwellings_2021": 57761,
@@ -609,7 +629,7 @@
  },
  {
    "Rank": 33,
-   "CMAID": 810,
+   "CMAUID": 810,
    "CMANAME": "Lethbridge",
    "Population_2021": 123847,
    "Dwellings_2021": 51735,
@@ -628,7 +648,7 @@
  },
  {
    "Rank": 34,
-   "CMAID": 595,
+   "CMAUID": 595,
    "CMANAME": "Thunder Bay",
    "Population_2021": 123258,
    "Dwellings_2021": 57877,
@@ -647,7 +667,7 @@
  },
  {
    "Rank": 35,
-   "CMAID": 938,
+   "CMAUID": 938,
    "CMANAME": "Nanaimo",
    "Population_2021": 115459,
    "Dwellings_2021": 51568,
@@ -666,7 +686,7 @@
  },
  {
    "Rank": 36,
-   "CMAID": 925,
+   "CMAUID": 925,
    "CMANAME": "Kamloops",
    "Population_2021": 114142,
    "Dwellings_2021": 50235,
@@ -685,7 +705,7 @@
  },
  {
    "Rank": 37,
-   "CMAID": 930,
+   "CMAUID": 930,
    "CMANAME": "Chilliwack",
    "Population_2021": 113767,
    "Dwellings_2021": 46708,
@@ -704,7 +724,7 @@
  },
  {
    "Rank": 38,
-   "CMAID": 522,
+   "CMAUID": 522,
    "CMANAME": "Belleville - Quinte West",
    "Population_2021": 111184,
    "Dwellings_2021": 48274,
@@ -723,7 +743,7 @@
  },
  {
    "Rank": 39,
-   "CMAID": 320,
+   "CMAUID": 320,
    "CMANAME": "Fredericton",
    "Population_2021": 108610,
    "Dwellings_2021": 48761,
@@ -742,7 +762,7 @@
  },
  {
    "Rank": 40,
-   "CMAID": 447,
+   "CMAUID": 447,
    "CMANAME": "Drummondville",
    "Population_2021": 101610,
    "Dwellings_2021": 47323,
@@ -761,7 +781,7 @@
  },
  {
    "Rank": 41,
-   "CMAID": 830,
+   "CMAUID": 830,
    "CMANAME": "Red Deer",
    "Population_2021": 100844,
    "Dwellings_2021": 43404,

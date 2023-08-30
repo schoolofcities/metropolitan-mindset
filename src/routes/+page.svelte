@@ -8,8 +8,14 @@
 
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A';
 
+	let cmaSelected = 'Toronto';
+	let cmauidSelected = 535;
+
 	const cmaData = cmaSummary.filter(item => item.Rank < 11);
 	console.log(cmaData);
+
+	let filteredData;
+	$: filteredData = cmaData.filter(item => item.CMAUID === cmauidSelected);
 
 	let cmaAll = cmaData
         .sort((a, b) => b.pop2021 - a.pop2021)
@@ -32,6 +38,8 @@
         }
     };
 
+	let map;
+
 	onMount(() => {
 		map = new mapboxgl.Map({
 			container: 'map', 
@@ -45,8 +53,6 @@
 			attributionControl: false
 		});
 		
-		
-
 		const scale = new mapboxgl.ScaleControl({
 			maxWidth: 100,
 			unit: 'metric'
@@ -57,7 +63,29 @@
 	});
 
 	function cmaSelect(e) {
-		console.log(e)
+		cmaSelected = e.detail.value;
+		let filteredData = cmaData.filter(item => item.CMANAME === cmaSelected)[0];
+		
+		cmauidSelected = filteredData.CMAUID;
+		let cmaX = filteredData.x;
+		let cmaY = filteredData.y;
+
+		map.setZoom(9);
+		map.setBearing(0);
+		map.setPitch(0);
+		map.panTo([cmaX, cmaY]);
+
+		const cmaFilter = [
+			"match",
+			["get", "CMAUID"],
+			[cmauidSelected.toString()],
+			true,
+			false
+		]
+		map.setFilter('metro-mindset-csd-2021-border', cmaFilter)
+		map.setFilter('metro-mindset-cma-2021-border', cmaFilter)
+		map.setFilter('metro-mindset-cma-2021-background', cmaFilter)
+
 	};
 
 </script>
@@ -65,7 +93,7 @@
 
 
 <svelte:head>
-	<link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
 </svelte:head>
 
 
@@ -74,15 +102,25 @@
 
 	<div id="content">
 
-        <h1>Metropolitan Mindset Maps</h1>
+        <h1>Metropolitan Mindset</h1>
 
-            <div id="content-wrapper" style="display: {isContentVisible ? 'block' : 'none'};">
-            <div class="bar"></div>
+		<div class="bar"></div>
 
-            <p>
-                meow meow meow
-            </p>           
-            
+		<div id="municipality-toggle">
+			<h2>
+				<input type="checkbox" on:change={toggleMunicipal} checked>
+				Municipal Borders
+			</h2>
+
+			
+		</div>     
+
+        <div id="content-wrapper" style="display: {isContentVisible ? 'block' : 'none'};">
+			
+			<p>
+				<i>Select to zoom to a metropolitan area:</i>
+			</p>
+
             <div class="bar"></div>
 
             <div id="select-wrapper">
@@ -93,40 +131,36 @@
                     clearable={false} 
                     showChevron={true} 
                     on:input={cmaSelect}
-                    --background="white"
+					--selected-item-color="#1E3765"
                     --height="20px"
                     --item-color="black"
                     --border-radius="0"
                     --border="1px"
                     --list-border-radius="0px"
-                    --font-size="15px"
+                    --font-size="16px"
                     --max-height="30px"
                     --item-is-active-color="black"
                     --item-is-active-bg="lightgrey"
                 />
             </div>
+            
 
             <div class="bar"></div>
 
-            <div id="satellite-switch">
-                <p>
-                    <input type="checkbox" on:change={toggleMunicipal} checked>
-                    Municipal Boundaries
-                </p>
-            </div>
-
-            <div class="bar"></div>
-
-        <div class="bar"></div>
-
-            <p>
-                This map was built by ..... Code is on <a href="">GitHub</a>
-            </p>
+			<p>
+				Land Area (sq.km): {6}<br>
+				Population (2021): <br>
+				Households (2021): <br>
+				Labour Force (2021): <br>
+				GDP (2019) in mllions: <br>
+				Number of Municipalities: <br>
+				% of Population in Central City: 
+			</p>
 
         </div>
 
         <div id="hide" on:click={toggleContent}>
-            {isContentVisible ? "Click here to hide this panel" : "Click here to show details about this map"}
+            <i>{isContentVisible ? "Click here to hide this panel" : "Click here to show details about this map"}</i>
         </div>
 
     </div>
@@ -160,25 +194,38 @@
 
 
     h1 {
-        font-size: 27px;
+        font-size: 24px;
         font-family: TradeGothicBold;
         margin: 0px;
         padding: 10px;
         padding-bottom: 5px;
-        color: var(--brandDarkBlue);
+		font-weight: 600;
+        color: var(--brandPurple);
     }
 
+	h2 {
+		font-size: 15px;
+        font-family: Roboto;
+		font-weight: 500;
+        margin: 0px;
+        padding: 10px;
+        padding-bottom: 5px;
+		padding-top: 5px;
+        color: var(--brandPink);
+	}
+
     p {
-        font-size: 12px;
+        font-size: 13px;
         font-family: RobotoRegular;
         line-height: 15px;
         margin: 0px;
         padding: 0px;
         padding-left: 10px;
         padding-right: 10px;
-        padding-bottom: 5px;
-        padding-top: 5px;
-        color: var(--brandGray80);
+        padding-bottom: 6px;
+        padding-top: 6px;
+		opacity: 0.8;
+        color: var(--brandDarkBlue);
     }
 
     a {
@@ -186,24 +233,47 @@
     }
 
     #content {
-        width: 300px;
+        width: 250px;
         position: absolute;
-        top: 5px;
-        left: 5px;
+        top: 1px;
+        left: 1px;
         background-color: white; 
         border: solid 1px lightgrey;
-        border-radius: 5px;
+        border-radius: 0px;
         z-index: 1; 
     }
 
     .bar {
         height: 1px;
-        width: 290px;
+        width: 245px;
         background-color: var(--brandDarkBlue);
         padding: 0px;
         margin: 0px;
         margin-left: 5px;
         opacity: 0.25;
     }
+
+	#hide {
+        font-family: RobotoRegular;
+        font-size: 12px;
+        height: 18px;
+        text-align: left;
+        background-color: none;
+        border-top: solid 1px lightgrey;
+        padding-top: 3px;
+		padding-left: 10px;
+        opacity: 0.8;
+        color: var(--brandDarkBlue);
+    }
+
+    #hide:hover {
+        background-color: #f5f5f5;
+        cursor: pointer;
+    }
+
+	input[type=checkbox]{
+		accent-color: var(--brandPink);  
+	}
+
 	
 </style>
