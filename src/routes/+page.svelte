@@ -121,6 +121,8 @@
 
 		<div class="bar"></div>
 
+		<p>Add a brief blurb about the project here. Include a link to sofc project website</p>
+
 		<div id="municipality-toggle">
 			<h2>
 				<input type="checkbox" on:change={toggleMunicipal} checked>
@@ -147,9 +149,9 @@
                     showChevron={true} 
                     on:input={cmaSelect}
 					--background="white"
-					--selected-item-color="#0D534D"
+					--selected-item-color="#6D247A"
                     --height="22px"
-                    --item-color="#0D534D"
+                    --item-color="#6D247A"
                     --border-radius="0"
                     --border="1px"
                     --list-border-radius="0px"
@@ -163,13 +165,13 @@
             <div class="bar"></div>
 
 			<p>
-				Land Area (sq.km): {6}<br>
-				Population (2021): <br>
-				Households (2021): <br>
-				Labour Force (2021): <br>
-				GDP (2019) in mllions: <br>
-				Number of Municipalities: <br>
-				% of Population in Central City: 
+				Number of Municipalities: {filteredData["Total_Number_of_Municipalities"]}<br>
+				Total Land Area (sq.km): {filteredData["Land_Area_(sq_km)"]}<br>
+				GDP (2019) in mllions: ${filteredData["GDP_2019_(millions)"]}<br>
+				Population (2021): {filteredData["Population_2021"]}<br>
+				% of Population in Central City: {filteredData["Proportion_of_Population_In_Central"]}%
+				
+				
 			</p>
 
 			<p>
@@ -187,9 +189,9 @@
                     showChevron={true} 
                     on:input={layerSelect}
 					--background="white"
-					--selected-item-color="#0D534D"
+					--selected-item-color="#6D247A"
                     --height="22px"
-                    --item-color="#0D534D"
+                    --item-color="#6D247A"
                     --border-radius="0"
                     --border="1px"
                     --list-border-radius="0px"
@@ -200,6 +202,9 @@
                 />
             </div>
 
+			<div class="bar"></div>
+
+			<p>Map created by Jeff Allen at the School of Cities. Data sources: Statistics Canada, OpenStreetMap, Mapbox</p>
 
 			<div class="bar"></div>
 
