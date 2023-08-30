@@ -1,24 +1,34 @@
 <script>
 
-    import "../assets/global.css"
-    import { onMount } from 'svelte'
+    import "../assets/global.css";
+    import { onMount } from 'svelte';
+	import Select from 'svelte-select';
 	import mapboxgl from "mapbox-gl";
+	import cmaSummary from '../assets/cma-summary.json';
 
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A';
+
+	const cmaData = cmaSummary.filter(item => item.Rank < 11);
+	console.log(cmaData);
+
+	let cmaAll = cmaData
+        .sort((a, b) => b.pop2021 - a.pop2021)
+        .map(item => item.CMANAME)
+
 
 	let isContentVisible = true;
     function toggleContent() {
         isContentVisible = !isContentVisible;
     }
 
-	let isChecked = false;
-    function toggleCheckbox() {
-        isChecked = !isChecked;
-        if (isChecked) {
-            map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.63);
+	let isMunicipalChecked = true;
+    function toggleMunicipal() {
+        isMunicipalChecked = !isMunicipalChecked;
+        if (isMunicipalChecked) {
+            map.setPaintProperty('metro-mindset-csd-2021-border', 'line-opacity', 1);
         } 
         else {
-            map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0);
+            map.setPaintProperty('metro-mindset-csd-2021-border', 'line-opacity', 0);
         }
     };
 
@@ -28,21 +38,27 @@
 			style: 'mapbox://styles/schoolofcities/cllwjnzlf016j01p71qq5eskt',
 			center: [-79.6, 43.9], 
 			zoom: 9,
-			maxZoom: 12,
+			maxZoom: 11,
 			minZoom: 5,
 			projection: 'globe',
 			scrollZoom: true,
 			attributionControl: false
 		});
 		
-		map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+		
 
 		const scale = new mapboxgl.ScaleControl({
 			maxWidth: 100,
 			unit: 'metric'
 			});
 		map.addControl(scale, 'bottom-right');
+
+		map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
 	});
+
+	function cmaSelect(e) {
+		console.log(e)
+	};
 
 </script>
 
@@ -69,14 +85,14 @@
             
             <div class="bar"></div>
 
-            <!-- <div id="select-wrapper">
+            <div id="select-wrapper">
                 <Select 
                     id="select"
                     items={cmaAll} 
-                    value={cmaSelected} 
+                    value={"Toronto"} 
                     clearable={false} 
                     showChevron={true} 
-                    on:input={handleSelect}
+                    on:input={cmaSelect}
                     --background="white"
                     --height="20px"
                     --item-color="black"
@@ -88,19 +104,14 @@
                     --item-is-active-color="black"
                     --item-is-active-bg="lightgrey"
                 />
-            </div> -->
+            </div>
 
             <div class="bar"></div>
 
             <div id="satellite-switch">
                 <p>
-                    <input type="checkbox" on:change={toggleCheckbox}>
-                    Satellite View
-                    <svg width="30" height="15" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="8" y1="10" x2="30" y2="10" stroke="#AB1368" stroke-width="1"/>
-                        <circle cx="19" cy="10" r="3" fill="#AB1368"/>
-                    </svg>
-                    Major Transit Line
+                    <input type="checkbox" on:change={toggleMunicipal} checked>
+                    Municipal Boundaries
                 </p>
             </div>
 
