@@ -5,6 +5,9 @@
 	import Select from 'svelte-select';
 	import mapboxgl from "mapbox-gl";
 	import cmaSummary from '../assets/cma-summary.json';
+	
+	let mapLayers = ["Street Map", "Satellite"];
+	let mapSelected = "Street Map"
 
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A';
 
@@ -15,7 +18,8 @@
 	console.log(cmaData);
 
 	let filteredData;
-	$: filteredData = cmaData.filter(item => item.CMAUID === cmauidSelected);
+	$: filteredData = cmaData.filter(item => item.CMAUID === cmauidSelected)[0];
+	$: console.log(filteredData);
 
 	let cmaAll = cmaData
         .sort((a, b) => b.pop2021 - a.pop2021)
@@ -88,6 +92,17 @@
 
 	};
 
+	function layerSelect(e) {
+		$: mapSelected = e.detail.value;
+		
+		if (mapSelected === "Street Map") {
+			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0);
+		}
+		if (mapSelected === "Satellite") {
+			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.698);
+		}
+	}
+
 </script>
 
 
@@ -131,20 +146,20 @@
                     clearable={false} 
                     showChevron={true} 
                     on:input={cmaSelect}
-					--selected-item-color="#1E3765"
-                    --height="20px"
-                    --item-color="black"
+					--background="white"
+					--selected-item-color="#0D534D"
+                    --height="22px"
+                    --item-color="#0D534D"
                     --border-radius="0"
                     --border="1px"
                     --list-border-radius="0px"
                     --font-size="16px"
                     --max-height="30px"
-                    --item-is-active-color="black"
-                    --item-is-active-bg="lightgrey"
+                    --item-is-active-color="#0D534D"
+                    --item-is-active-bg="#6FC7EA"
                 />
             </div>
             
-
             <div class="bar"></div>
 
 			<p>
@@ -156,6 +171,37 @@
 				Number of Municipalities: <br>
 				% of Population in Central City: 
 			</p>
+
+			<p>
+				<i>Select to switch between map layers:</i>
+			</p>
+
+			<div class="bar"></div>
+
+			<div id="select-wrapper">
+                <Select 
+                    id="select"
+                    items={mapLayers} 
+                    value={"Street Map"} 
+                    clearable={false} 
+                    showChevron={true} 
+                    on:input={layerSelect}
+					--background="white"
+					--selected-item-color="#0D534D"
+                    --height="22px"
+                    --item-color="#0D534D"
+                    --border-radius="0"
+                    --border="1px"
+                    --list-border-radius="0px"
+                    --font-size="16px"
+                    --max-height="30px"
+                    --item-is-active-color="#0D534D"
+                    --item-is-active-bg="#6FC7EA"
+                />
+            </div>
+
+
+			<div class="bar"></div>
 
         </div>
 
@@ -259,7 +305,6 @@
         height: 18px;
         text-align: left;
         background-color: none;
-        border-top: solid 1px lightgrey;
         padding-top: 3px;
 		padding-left: 10px;
         opacity: 0.8;
