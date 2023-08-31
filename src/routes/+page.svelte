@@ -7,6 +7,7 @@
 	import cmaSummary from '../assets/cma-summary.json';
 	import transitLines from '../assets/transit-lines-canada.geo.json';
     import transitStops from '../assets/transit-stops-canada.geo.json';
+	import municipalLabels from '../assets/csd-2021-centroids.geo.json';
 	
 	let mapLayers = ["Street Map", "Satellite"];
 	let mapSelected = "Street Map"
@@ -38,9 +39,11 @@
         isMunicipalChecked = !isMunicipalChecked;
         if (isMunicipalChecked) {
             map.setPaintProperty('metro-mindset-csd-2021-border', 'line-opacity', 1);
+			map.setPaintProperty('municipalLabels', 'text-opacity', 1);
         } 
         else {
             map.setPaintProperty('metro-mindset-csd-2021-border', 'line-opacity', 0);
+			map.setPaintProperty('municipalLabels', 'text-opacity', 0);
         }
     };
 
@@ -66,6 +69,43 @@
 		map.addControl(scale, 'bottom-right');
 
 		map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+
+		map.on('load', function () {
+            map.addLayer({
+            id: 'municipalLabels',
+            type: 'symbol',
+            source: {
+                type: 'geojson',
+                data: municipalLabels
+            },
+            layout: {
+				'text-field': '{CSDNAME}', 
+				'text-font': ['Roboto Regular'], 
+				'text-size': [
+					'interpolate',
+					['linear'],
+					['zoom'],
+					9, 12, 
+					18, 40 
+				],
+				'text-anchor': 'center'
+			},
+			paint: {
+				'text-color': '#AB1368',
+				'text-halo-color': 'rgba(255, 255, 255, 0.65)', 
+				'text-halo-width': 2,
+				'text-halo-blur': 1	
+			}
+            });
+
+			map.setFilter('municipalLabels', [
+				"match",
+				["get", "CMAUID"],
+				['535'],
+				true,
+				false
+			])
+        });
 
 		map.on('load', function () {
             map.addLayer({
@@ -135,7 +175,7 @@
 		map.setFilter('metro-mindset-csd-2021-border', cmaFilter)
 		map.setFilter('metro-mindset-cma-2021-border', cmaFilter)
 		map.setFilter('metro-mindset-cma-2021-background', cmaFilter)
-
+		map.setFilter('municipalLabels', cmaFilter)
 	};
 
 	function layerSelect(e) {
@@ -145,7 +185,7 @@
 			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.011);
 		}
 		if (mapSelected === "Satellite") {
-			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.698);
+			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.798);
 		}
 	}
 
@@ -167,7 +207,7 @@
 
 		<div class="bar"></div>
 
-		<p>Add a brief blurb about the project here. Include a link to sofc project website</p>
+		<p>This map is still under construction :) Add brief blurb about this project here</p>
 
 		<div id="municipality-toggle">
 			<h2>
@@ -209,11 +249,15 @@
             <div class="bar"></div>
 
 			<p>
-				Number of Municipalities: {filteredData["Total_Number_of_Municipalities"]}<br>
-				Total Land Area (sq.km): {Math.round(filteredData["Land_Area_(sq_km)"]).toLocaleString()}<br>
-				GDP (2019) in mllions: ${Math.round(filteredData["GDP_2019_(millions)"]).toLocaleString()}<br>
-				Population (2021): {Math.round(filteredData["Population_2021"]).toLocaleString()}<br>
-				% of Population in Central City: {filteredData["Proportion_of_Population_In_Central"]}%
+				Number of Municipalities: <span id="number">{filteredData["Total_Number_of_Municipalities"]}</span><br>
+
+				Total Land Area (sq.km): <span id="number">{Math.round(filteredData["Land_Area_(sq_km)"]).toLocaleString()}</span><br>
+
+				GDP (2019) in mllions: <span id="number">${Math.round(filteredData["GDP_2019_(millions)"]).toLocaleString()}</span><br>
+
+				Population (2021): <span id="number">{Math.round(filteredData["Population_2021"]).toLocaleString()}</span><br>
+
+				% of Population in Central City: <span id="number">{filteredData["Proportion_of_Population_In_Central"]}%</span>
 			</p>
 
 			<p>
@@ -315,8 +359,8 @@
         padding-right: 10px;
         padding-bottom: 6px;
         padding-top: 6px;
-		opacity: 0.8;
-        color: var(--brandDarkBlue);
+		opacity: 1;
+        color: var(--brandDarkBlueFade);
     }
 
     a {
@@ -333,6 +377,11 @@
         border-radius: 0px;
         z-index: 1; 
     }
+
+	#number {
+		color: var(--brandMedGreen);
+		/* font-size: 15px; */
+	}
 
     .bar {
         height: 1px;
