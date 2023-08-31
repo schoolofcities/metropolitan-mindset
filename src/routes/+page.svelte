@@ -5,6 +5,8 @@
 	import Select from 'svelte-select';
 	import mapboxgl from "mapbox-gl";
 	import cmaSummary from '../assets/cma-summary.json';
+	import transitLines from '../assets/transit-lines-canada.geo.json';
+    import transitStops from '../assets/transit-stops-canada.geo.json';
 	
 	let mapLayers = ["Street Map", "Satellite"];
 	let mapSelected = "Street Map"
@@ -50,7 +52,7 @@
 			style: 'mapbox://styles/schoolofcities/cllwjnzlf016j01p71qq5eskt',
 			center: [-79.6, 43.9], 
 			zoom: 9,
-			maxZoom: 11,
+			maxZoom: 12,
 			minZoom: 5,
 			projection: 'globe',
 			scrollZoom: true,
@@ -64,6 +66,50 @@
 		map.addControl(scale, 'bottom-right');
 
 		map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+
+		map.on('load', function () {
+            map.addLayer({
+            id: 'transitStops',
+            type: 'circle',
+            source: {
+                type: 'geojson',
+                data: transitStops
+            },
+            paint: {
+                'circle-radius': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    5, 0,
+                    6, 1,
+                    20, 7
+                ],
+                'circle-color': '#8DBF2E',
+            }
+            }, 'bridge-minor-case');
+        });
+
+        map.on('load', function () {
+            map.addLayer({
+            id: 'transitLines',
+            type: 'line',
+            source: {
+                type: 'geojson',
+                data: transitLines
+            },
+            paint: {
+                'line-width': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    5, 0,
+                    6, 1,
+                ],
+                'line-color': '#8DBF2E',
+            }
+            }, 'bridge-minor-case');
+        });
+
 	});
 
 	function cmaSelect(e) {
@@ -96,7 +142,7 @@
 		$: mapSelected = e.detail.value;
 		
 		if (mapSelected === "Street Map") {
-			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0);
+			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.011);
 		}
 		if (mapSelected === "Satellite") {
 			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.698);
