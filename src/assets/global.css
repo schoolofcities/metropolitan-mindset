@@ -3,9 +3,15 @@
     src: url("Trade Gothic LT Bold.ttf");
 }
 
+@font-face {
+    font-family: RobotoRegular;
+    src: url("Roboto-Regular.ttf");
+}
+
 :root {
     font-family: Roboto, sans-serif;
     --brandDarkBlue: #1E3765;
+    --brandDarkBlueFade: #1e3765cb;
     --brandMedBlue: #007FA3;
     --brandLightBlue: #6FC7EA;
     --brandPurple: #6D247A;
