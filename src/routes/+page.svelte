@@ -4,15 +4,22 @@
     import { onMount } from 'svelte';
 	import Select from 'svelte-select';
 	import mapboxgl from "mapbox-gl";
+    import * as topojson from "topojson-client";
+
 	import cmaSummary from '../assets/cma-summary.json';
 	import transitLines from '../assets/transit-lines-canada.geo.json';
     import transitStops from '../assets/transit-stops-canada.geo.json';
 	import municipalLabels from '../assets/csd-2021-centroids.geo.json';
-	
-	let mapLayers = ["Street Map", "Satellite"];
-	let mapSelected = "Street Map"
 
-	mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A';
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A';
+
+    let isContentVisible = true;
+    function toggleContent() {
+        isContentVisible = !isContentVisible;
+    }
+
+
+    // Changing the CMA
 
 	let cmaSelected = 'Toronto';
 	let cmauidSelected = 535;
@@ -29,10 +36,35 @@
         .map(item => item.CMANAME)
 
 
-	let isContentVisible = true;
-    function toggleContent() {
-        isContentVisible = !isContentVisible;
-    }
+    function cmaSelect(e) {
+		cmaSelected = e.detail.value;
+		let filteredData = cmaData.filter(item => item.CMANAME === cmaSelected)[0];
+		
+		cmauidSelected = filteredData.CMAUID;
+		let cmaX = filteredData.x;
+		let cmaY = filteredData.y;
+
+		map.setZoom(9);
+		map.setBearing(0);
+		map.setPitch(0);
+		map.panTo([cmaX, cmaY]);
+
+		const cmaFilter = [
+			"match",
+			["get", "CMAUID"],
+			[cmauidSelected.toString()],
+			true,
+			false
+		]
+		map.setFilter('metro-mindset-csd-2021-border', cmaFilter)
+		map.setFilter('metro-mindset-cma-2021-border', cmaFilter)
+		map.setFilter('metro-mindset-cma-2021-background', cmaFilter)
+		map.setFilter('municipalLabels', cmaFilter)
+	};
+
+
+
+    // Add / remove municipal borders
 
 	let isMunicipalChecked = true;
     function toggleMunicipal() {
@@ -46,6 +78,62 @@
 			map.setPaintProperty('municipalLabels', 'text-opacity', 0);
         }
     };
+
+
+
+    // Changing the map layer
+
+	let mapLayers = ["Street Map", "Satellite", "Population Density"];
+	let mapSelected = "Street Map"
+
+    function layerSelect(e) {
+		$: mapSelected = e.detail.value;
+		
+		if (mapSelected === "Street Map") {
+			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.011);
+            // remove CT layer
+		}
+		if (mapSelected === "Satellite") {
+			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.798);
+            // remove CT layer
+		}
+        if (mapSelected === "Population Density") {
+            console.log(mapSelected);
+            // if CT is null
+            //   add CT
+            //   join to tabular data
+
+        }
+	}
+
+    let ct;
+    async function loadCensusTract(cmauid) {
+        if (cmauid === cmauidSelected) { // Check the passed cmauid
+            try {
+                console.log(cmauid);
+                const response = await fetch(`ct-${cmauid}-2021.topo.json`);
+                ct = await response.json();
+                ct = topojson.feature(ct, "mtl-ct-2021");
+
+                // load in and join tabular data
+
+                console.log(ct)
+            } catch (error) {
+                console.error('Error loading CT data files:', error);
+            }
+        }
+    }
+
+    $: {
+        loadCensusTract(cmauidSelected);
+    }
+
+
+
+
+
+
+    // Map setup
 
 	let map;
 
@@ -152,42 +240,9 @@
 
 	});
 
-	function cmaSelect(e) {
-		cmaSelected = e.detail.value;
-		let filteredData = cmaData.filter(item => item.CMANAME === cmaSelected)[0];
-		
-		cmauidSelected = filteredData.CMAUID;
-		let cmaX = filteredData.x;
-		let cmaY = filteredData.y;
 
-		map.setZoom(9);
-		map.setBearing(0);
-		map.setPitch(0);
-		map.panTo([cmaX, cmaY]);
 
-		const cmaFilter = [
-			"match",
-			["get", "CMAUID"],
-			[cmauidSelected.toString()],
-			true,
-			false
-		]
-		map.setFilter('metro-mindset-csd-2021-border', cmaFilter)
-		map.setFilter('metro-mindset-cma-2021-border', cmaFilter)
-		map.setFilter('metro-mindset-cma-2021-background', cmaFilter)
-		map.setFilter('municipalLabels', cmaFilter)
-	};
-
-	function layerSelect(e) {
-		$: mapSelected = e.detail.value;
-		
-		if (mapSelected === "Street Map") {
-			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.011);
-		}
-		if (mapSelected === "Satellite") {
-			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.798);
-		}
-	}
+	
 
 </script>
 
