@@ -4,18 +4,34 @@
     import { onMount } from 'svelte';
 	import Select from 'svelte-select';
 	import mapboxgl from "mapbox-gl";
+    import * as topojson from "topojson-client";
+    import {csv} from "d3-fetch";
+
 	import cmaSummary from '../assets/cma-summary.json';
 	import transitLines from '../assets/transit-lines-canada.geo.json';
     import transitStops from '../assets/transit-stops-canada.geo.json';
 	import municipalLabels from '../assets/csd-2021-centroids.geo.json';
-	
-	let mapLayers = ["Street Map", "Satellite"];
-	let mapSelected = "Street Map"
 
-	mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A';
 
+
+
+
+
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A';
+
+    let isContentVisible = true;
+    function toggleContent() {
+        isContentVisible = !isContentVisible;
+    }
+
+
+    // Changing the CMA
+
+   
 	let cmaSelected = 'Toronto';
 	let cmauidSelected = 535;
+    let map;
+    let ctDataTable;
 
 	const cmaData = cmaSummary.filter(item => item.Rank < 11);
 	console.log(cmaData);
@@ -29,10 +45,37 @@
         .map(item => item.CMANAME)
 
 
-	let isContentVisible = true;
-    function toggleContent() {
-        isContentVisible = !isContentVisible;
-    }
+    function cmaSelect(e) {
+		cmaSelected = e.detail.value;
+		let filteredData = cmaData.filter(item => item.CMANAME === cmaSelected)[0];
+		
+		cmauidSelected = filteredData.CMAUID;
+		let cmaX = filteredData.x;
+		let cmaY = filteredData.y;
+
+		map.setZoom(9);
+		map.setBearing(0);
+		map.setPitch(0);
+		map.panTo([cmaX, cmaY]);
+
+		const cmaFilter = [
+			"match",
+			["get", "CMAUID"],
+			[cmauidSelected.toString()],
+			true,
+			false
+		];
+		map.setFilter('metro-mindset-csd-2021-border', cmaFilter);
+		map.setFilter('metro-mindset-cma-2021-border', cmaFilter);
+		map.setFilter('metro-mindset-cma-2021-background', cmaFilter);
+		map.setFilter('municipalLabels', cmaFilter);
+
+        
+	};
+
+
+
+    // Add / remove municipal borders
 
 	let isMunicipalChecked = true;
     function toggleMunicipal() {
@@ -47,9 +90,144 @@
         }
     };
 
-	let map;
+
+
+    // Changing the map layer
+
+	let mapLayers = ["Street Map", "Satellite", "Population Density"];
+	let mapSelected = "Street Map"
+
+    const choropleths = {
+        "population-density": {
+            "name": "Population Density",
+            "breaks": [500, 2500, 5000, 7500],
+            "colours": ["#fffef8", "#fbefb5", "#f7dd66", "#f1c500"]
+            // "colours": ["#fcfcfc", "#a4dcd4", "#4ebdad", "#00a189"]
+        }
+    }
+
+    function layerSelect(e) {
+		$: mapSelected = e.detail.value;
+        if (mapSelected === "Street Map") {
+			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.011);
+            try {
+                map.removeLayer('ctPolygon');
+                map.removeSource('ctPolygon');
+            } catch {};
+            // remove CT layer
+		}
+		else if (mapSelected === "Satellite") {
+			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.798);
+            try {
+                map.removeLayer('ctPolygon');
+                map.removeSource('ctPolygon');
+            } catch {};
+            // remove CT layer
+		}
+        else if (mapSelected === "Population Density") {
+            try {
+                map.removeLayer('ctPolygon');
+                map.removeSource('ctPolygon');
+            } catch {};
+            map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.011);
+            map.addLayer({
+                id: 'ctPolygon',
+                type: 'fill',
+                source: {
+                    type: 'geojson',
+                    data: ctPolygon
+                },
+                paint: {
+                    'fill-outline-color': 'white',
+                    'fill-opacity': 0.881,
+                    'fill-color': [
+                        'case',
+                        ['!=', ['get', 'Population'], null],
+                        [
+                            'step',
+                            ['/', ['get', 'Population'], ['get', 'Area']],
+                            choropleths['population-density'].colours[0],
+                            choropleths['population-density'].breaks[0],
+                            choropleths['population-density'].colours[1],
+                            choropleths['population-density'].breaks[1],
+                            choropleths['population-density'].colours[2],
+                            choropleths['population-density'].breaks[2],
+                            choropleths['population-density'].colours[3]
+                        ],
+                        "#cbcbcb"
+                    ]
+                },
+            }, 'bridge-minor-case');
+        }
+	}
+
+    // getting the ctPolygon data and join ctData for the selected CMA
+    let ctPolygon;
+    async function loadCensusTract(cmauid) {
+        if (cmauid === cmauidSelected) { 
+            try {
+                console.log(cmauid);
+                const response = await fetch(`ct-${cmauid}-2021.topo.json`);
+                ctPolygon = await response.json();
+                console.log(ctPolygon);
+
+                ctPolygon = topojson.feature(ctPolygon, `ct-${cmauid}-2021`);
+
+                // join tabular data
+                const dataMap = new Map();
+                ctDataTable.forEach(item => {
+                    dataMap.set(item.ctuid, item);
+                });
+                const joinedData = ctPolygon.features.map(feature => {
+                    const ctuid = feature.properties.ctuid;
+                    const matchingData = dataMap.get(ctuid);
+                    return {
+                        ...feature,
+                        properties: {
+                        ...feature.properties,
+                        ...matchingData
+                        }
+                    };
+                });
+
+                ctPolygon.features = joinedData;
+                
+            } catch (error) {
+                console.error('Error loading CT data files:', error);
+            }
+        }
+    }
+
+    $: {
+        loadCensusTract(cmauidSelected);
+    }
+
+
+
+
+
+
+    // Map setup and loading ct data table
+
+	
 
 	onMount(() => {
+
+        csv("/ct-data.csv")
+            .then((data) => {
+                data.forEach((row) => {
+                for (const key in row) {
+                    if (key !== 'ctuid') {
+                    row[key] = parseFloat(row[key]);
+                    }
+                }
+                });
+                ctDataTable = data;
+            })
+            .catch((error) => {
+                console.error("Error loading CSV data:", error);
+            });
+
 		map = new mapboxgl.Map({
 			container: 'map', 
 			style: 'mapbox://styles/schoolofcities/cllwjnzlf016j01p71qq5eskt',
@@ -122,7 +300,7 @@
                     ['zoom'],
                     5, 0,
                     6, 1,
-                    20, 7
+                    20, 10
                 ],
                 'circle-color': '#8DBF2E',
             }
@@ -143,51 +321,20 @@
                     ['linear'],
                     ['zoom'],
                     5, 0,
-                    6, 1,
+                    6, 2,
                 ],
                 'line-color': '#8DBF2E',
             }
             }, 'bridge-minor-case');
         });
 
+        loadCensusTract(cmauidSelected);
+
 	});
 
-	function cmaSelect(e) {
-		cmaSelected = e.detail.value;
-		let filteredData = cmaData.filter(item => item.CMANAME === cmaSelected)[0];
-		
-		cmauidSelected = filteredData.CMAUID;
-		let cmaX = filteredData.x;
-		let cmaY = filteredData.y;
 
-		map.setZoom(9);
-		map.setBearing(0);
-		map.setPitch(0);
-		map.panTo([cmaX, cmaY]);
 
-		const cmaFilter = [
-			"match",
-			["get", "CMAUID"],
-			[cmauidSelected.toString()],
-			true,
-			false
-		]
-		map.setFilter('metro-mindset-csd-2021-border', cmaFilter)
-		map.setFilter('metro-mindset-cma-2021-border', cmaFilter)
-		map.setFilter('metro-mindset-cma-2021-background', cmaFilter)
-		map.setFilter('municipalLabels', cmaFilter)
-	};
-
-	function layerSelect(e) {
-		$: mapSelected = e.detail.value;
-		
-		if (mapSelected === "Street Map") {
-			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.011);
-		}
-		if (mapSelected === "Satellite") {
-			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.798);
-		}
-	}
+	
 
 </script>
 
@@ -290,7 +437,16 @@
 
 			<div class="bar"></div>
 
-			<p>Map created by Jeff Allen at the School of Cities. Data sources: Statistics Canada, OpenStreetMap, Mapbox</p>
+            <div class="legend">
+
+                
+
+
+                <p>Map created by Jeff Allen at the School of Cities. Data sources: Statistics Canada, OpenStreetMap, Mapbox</p>
+
+            </div>
+
+			
 
 			<div class="bar"></div>
 
