@@ -70,6 +70,7 @@
 		map.setFilter('metro-mindset-cma-2021-background', cmaFilter);
 		map.setFilter('municipalLabels', cmaFilter);
 
+        
 	};
 
 
@@ -100,7 +101,8 @@
         "population-density": {
             "name": "Population Density",
             "breaks": [500, 2500, 5000, 7500],
-            "colours": ["#fefefe", "#faebaa", "#f6da5e", "#f1c500"]
+            "colours": ["#fffef8", "#fbefb5", "#f7dd66", "#f1c500"]
+            // "colours": ["#fcfcfc", "#a4dcd4", "#4ebdad", "#00a189"]
         }
     }
 
@@ -137,9 +139,10 @@
                 },
                 paint: {
                     'fill-outline-color': 'white',
+                    'fill-opacity': 0.881,
                     'fill-color': [
                         'case',
-                        ['>=', ['/', ['get', 'Population'], ['get', 'Area']], -1],
+                        ['!=', ['get', 'Population'], null],
                         [
                             'step',
                             ['/', ['get', 'Population'], ['get', 'Area']],
@@ -151,7 +154,7 @@
                             choropleths['population-density'].breaks[2],
                             choropleths['population-density'].colours[3]
                         ],
-                        "#fff"
+                        "#cbcbcb"
                     ]
                 },
             }, 'bridge-minor-case');
@@ -166,7 +169,9 @@
                 console.log(cmauid);
                 const response = await fetch(`ct-${cmauid}-2021.topo.json`);
                 ctPolygon = await response.json();
-                ctPolygon = topojson.feature(ctPolygon, "mtl-ct-2021");
+                console.log(ctPolygon);
+
+                ctPolygon = topojson.feature(ctPolygon, `ct-${cmauid}-2021`);
 
                 // join tabular data
                 const dataMap = new Map();
@@ -295,7 +300,7 @@
                     ['zoom'],
                     5, 0,
                     6, 1,
-                    20, 7
+                    20, 10
                 ],
                 'circle-color': '#8DBF2E',
             }
@@ -316,12 +321,14 @@
                     ['linear'],
                     ['zoom'],
                     5, 0,
-                    6, 1,
+                    6, 2,
                 ],
                 'line-color': '#8DBF2E',
             }
             }, 'bridge-minor-case');
         });
+
+        loadCensusTract(cmauidSelected);
 
 	});
 
@@ -430,7 +437,16 @@
 
 			<div class="bar"></div>
 
-			<p>Map created by Jeff Allen at the School of Cities. Data sources: Statistics Canada, OpenStreetMap, Mapbox</p>
+            <div class="legend">
+
+                
+
+
+                <p>Map created by Jeff Allen at the School of Cities. Data sources: Statistics Canada, OpenStreetMap, Mapbox</p>
+
+            </div>
+
+			
 
 			<div class="bar"></div>
 
