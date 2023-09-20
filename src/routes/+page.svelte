@@ -31,10 +31,28 @@
     }
 
 
-    // Changing the CMA - zooming to new CMA
+    // loading CMA summary data, also converting it to geojson for map points
 
 	const cmaData = cmaSummary.filter(item => item.Rank < 11);
-	console.log(cmaData);
+
+    let cmaGeoJson;
+    cmaGeoJson = {
+        type: 'FeatureCollection',
+        features: cmaData.filter(feature => feature.cmauid !== "000").map(feature => ({
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            coordinates: [feature.x, feature.y]
+        },
+        properties: {
+            cmauid: feature.cmauid,
+            cmaname: feature.cmaname
+        }
+        }))
+    }
+
+
+    // Changing the CMA - zooming to new CMA
 
 	let filteredData;
 	$: filteredData = cmaData.filter(item => item.CMAUID === cmauidSelected)[0];
@@ -243,7 +261,7 @@
 			center: [-79.6, 43.9], 
 			zoom: 9,
 			maxZoom: 12,
-			minZoom: 5,
+			minZoom: 3,
 			projection: 'globe',
 			scrollZoom: true,
 			attributionControl: false
@@ -336,6 +354,24 @@
             }
             }, 'bridge-minor-case');
         });
+
+        map.on('load', function () {
+            map.addLayer({
+            id: 'cmaGeoJson',
+            type: 'circle',
+            source: {
+                type: 'geojson',
+                data: cmaGeoJson
+            },
+            paint: {
+                'circle-radius': 6,
+                'circle-color': '#1E3765',
+                'circle-stroke-width': 2,
+                'circle-stroke-color': '#fff'
+            }
+            });
+        });
+
 
         loadCensusTract(cmauidSelected);
 
@@ -451,7 +487,7 @@
                 {#if (mapSelected === "Population Density")}
 
                 
-                
+
                 {/if}
 
                 <p>Map created by Jeff Allen at the School of Cities. Data sources: Statistics Canada, OpenStreetMap, Mapbox</p>
