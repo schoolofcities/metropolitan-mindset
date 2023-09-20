@@ -70,7 +70,7 @@
 		map.setFilter('metro-mindset-cma-2021-background', cmaFilter);
 		map.setFilter('municipalLabels', cmaFilter);
 
-        
+
 	};
 
 
@@ -438,9 +438,6 @@
 			<div class="bar"></div>
 
             <div class="legend">
-
-                
-
 
                 <p>Map created by Jeff Allen at the School of Cities. Data sources: Statistics Canada, OpenStreetMap, Mapbox</p>
 
