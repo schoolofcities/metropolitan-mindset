@@ -1,12 +1,14 @@
 <script>
 
+    // libraries
     import "../assets/global.css";
     import { onMount } from 'svelte';
 	import Select from 'svelte-select';
 	import mapboxgl from "mapbox-gl";
     import * as topojson from "topojson-client";
     import {csv} from "d3-fetch";
-
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A';
+    // data
 	import cmaSummary from '../assets/cma-summary.json';
 	import transitLines from '../assets/transit-lines-canada.geo.json';
     import transitStops from '../assets/transit-stops-canada.geo.json';
@@ -14,24 +16,22 @@
 
 
 
+    // initial variables
+	let cmaSelected = 'Toronto';
+	let cmauidSelected = 535;
+    let map;
+    let ctDataTable;
 
 
-
-    mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A';
-
+    // toggle for if the panel is visible or not
+    
     let isContentVisible = true;
     function toggleContent() {
         isContentVisible = !isContentVisible;
     }
 
 
-    // Changing the CMA
-
-   
-	let cmaSelected = 'Toronto';
-	let cmauidSelected = 535;
-    let map;
-    let ctDataTable;
+    // Changing the CMA - zooming to new CMA
 
 	const cmaData = cmaSummary.filter(item => item.Rank < 11);
 	console.log(cmaData);
@@ -75,7 +75,7 @@
 
 
 
-    // Add / remove municipal borders
+    // Add or remove municipal borders
 
 	let isMunicipalChecked = true;
     function toggleMunicipal() {
@@ -108,7 +108,12 @@
 
     function layerSelect(e) {
 		$: mapSelected = e.detail.value;
-        if (mapSelected === "Street Map") {
+        layerSet(cmauidSelected, mapSelected);
+	}
+
+    function layerSet(cmauid, layer) {
+        console.log(cmauid, layer);
+        if (layer === "Street Map") {
 			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.011);
             try {
                 map.removeLayer('ctPolygon');
@@ -116,7 +121,7 @@
             } catch {};
             // remove CT layer
 		}
-		else if (mapSelected === "Satellite") {
+		else if (layer === "Satellite") {
 			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.798);
             try {
                 map.removeLayer('ctPolygon');
@@ -124,7 +129,7 @@
             } catch {};
             // remove CT layer
 		}
-        else if (mapSelected === "Population Density") {
+        else if (layer === "Population Density") {
             try {
                 map.removeLayer('ctPolygon');
                 map.removeSource('ctPolygon');
@@ -157,11 +162,14 @@
                         "#cbcbcb"
                     ]
                 },
-            }, 'bridge-minor-case');
+            }, 'transitStops');
         }
-	}
+    }
+
+
 
     // getting the ctPolygon data and join ctData for the selected CMA
+
     let ctPolygon;
     async function loadCensusTract(cmauid) {
         if (cmauid === cmauidSelected) { 
@@ -191,6 +199,8 @@
                 });
 
                 ctPolygon.features = joinedData;
+
+                layerSet(cmauid, mapSelected);
                 
             } catch (error) {
                 console.error('Error loading CT data files:', error);
@@ -198,6 +208,7 @@
         }
     }
 
+    // called each time the CMA changes
     $: {
         loadCensusTract(cmauidSelected);
     }
@@ -207,9 +218,7 @@
 
 
 
-    // Map setup and loading ct data table
-
-	
+    // Map setup and loading ct data table - happens on initial load of the page
 
 	onMount(() => {
 
@@ -438,6 +447,12 @@
 			<div class="bar"></div>
 
             <div class="legend">
+
+                {#if (mapSelected === "Population Density")}
+
+                
+                
+                {/if}
 
                 <p>Map created by Jeff Allen at the School of Cities. Data sources: Statistics Canada, OpenStreetMap, Mapbox</p>
 
