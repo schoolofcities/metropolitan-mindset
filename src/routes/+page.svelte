@@ -1,12 +1,14 @@
 <script>
 
+    // libraries
     import "../assets/global.css";
     import { onMount } from 'svelte';
 	import Select from 'svelte-select';
 	import mapboxgl from "mapbox-gl";
     import * as topojson from "topojson-client";
     import {csv} from "d3-fetch";
-
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A';
+    // data
 	import cmaSummary from '../assets/cma-summary.json';
 	import transitLines from '../assets/transit-lines-canada.geo.json';
     import transitStops from '../assets/transit-stops-canada.geo.json';
@@ -14,27 +16,43 @@
 
 
 
+    // initial variables
+	let cmaSelected = 'Toronto';
+	let cmauidSelected = 535;
+    let map;
+    let ctDataTable;
 
 
-
-    mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A';
-
+    // toggle for if the panel is visible or not
+    
     let isContentVisible = true;
     function toggleContent() {
         isContentVisible = !isContentVisible;
     }
 
 
-    // Changing the CMA
-
-   
-	let cmaSelected = 'Toronto';
-	let cmauidSelected = 535;
-    let map;
-    let ctDataTable;
+    // loading CMA summary data, also converting it to geojson for map points
 
 	const cmaData = cmaSummary.filter(item => item.Rank < 11);
-	console.log(cmaData);
+
+    let cmaGeoJson;
+    cmaGeoJson = {
+        type: 'FeatureCollection',
+        features: cmaData.filter(feature => feature.cmauid !== "000").map(feature => ({
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            coordinates: [feature.x, feature.y]
+        },
+        properties: {
+            cmauid: feature.cmauid,
+            cmaname: feature.cmaname
+        }
+        }))
+    }
+
+
+    // Changing the CMA - zooming to new CMA
 
 	let filteredData;
 	$: filteredData = cmaData.filter(item => item.CMAUID === cmauidSelected)[0];
@@ -75,7 +93,7 @@
 
 
 
-    // Add / remove municipal borders
+    // Add or remove municipal borders
 
 	let isMunicipalChecked = true;
     function toggleMunicipal() {
@@ -108,7 +126,12 @@
 
     function layerSelect(e) {
 		$: mapSelected = e.detail.value;
-        if (mapSelected === "Street Map") {
+        layerSet(cmauidSelected, mapSelected);
+	}
+
+    function layerSet(cmauid, layer) {
+        console.log(cmauid, layer);
+        if (layer === "Street Map") {
 			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.011);
             try {
                 map.removeLayer('ctPolygon');
@@ -116,7 +139,7 @@
             } catch {};
             // remove CT layer
 		}
-		else if (mapSelected === "Satellite") {
+		else if (layer === "Satellite") {
 			map.setPaintProperty('mapbox-satellite', 'raster-opacity', 0.798);
             try {
                 map.removeLayer('ctPolygon');
@@ -124,7 +147,7 @@
             } catch {};
             // remove CT layer
 		}
-        else if (mapSelected === "Population Density") {
+        else if (layer === "Population Density") {
             try {
                 map.removeLayer('ctPolygon');
                 map.removeSource('ctPolygon');
@@ -157,11 +180,14 @@
                         "#cbcbcb"
                     ]
                 },
-            }, 'bridge-minor-case');
+            }, 'transitStops');
         }
-	}
+    }
+
+
 
     // getting the ctPolygon data and join ctData for the selected CMA
+
     let ctPolygon;
     async function loadCensusTract(cmauid) {
         if (cmauid === cmauidSelected) { 
@@ -191,6 +217,8 @@
                 });
 
                 ctPolygon.features = joinedData;
+
+                layerSet(cmauid, mapSelected);
                 
             } catch (error) {
                 console.error('Error loading CT data files:', error);
@@ -198,6 +226,7 @@
         }
     }
 
+    // called each time the CMA changes
     $: {
         loadCensusTract(cmauidSelected);
     }
@@ -207,9 +236,7 @@
 
 
 
-    // Map setup and loading ct data table
-
-	
+    // Map setup and loading ct data table - happens on initial load of the page
 
 	onMount(() => {
 
@@ -234,7 +261,7 @@
 			center: [-79.6, 43.9], 
 			zoom: 9,
 			maxZoom: 12,
-			minZoom: 5,
+			minZoom: 3,
 			projection: 'globe',
 			scrollZoom: true,
 			attributionControl: false
@@ -272,7 +299,14 @@
 				'text-color': '#AB1368',
 				'text-halo-color': 'rgba(255, 255, 255, 0.65)', 
 				'text-halo-width': 2,
-				'text-halo-blur': 1	
+				'text-halo-blur': 1,
+                'text-opacity':  [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    5.99, 0,
+                    6, 1
+                ]
 			}
             });
 
@@ -328,6 +362,38 @@
             }, 'bridge-minor-case');
         });
 
+        map.on('load', function () {
+            map.addLayer({
+            id: 'cmaGeoJson',
+            type: 'circle',
+            source: {
+                type: 'geojson',
+                data: cmaGeoJson
+            },
+            paint: {
+                'circle-radius': 6,
+                'circle-color': '#1E3765',
+                'circle-stroke-width': 2,
+                'circle-stroke-color': '#fff',
+                'circle-opacity': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    4.99, 1,
+                    5, 0
+                ],
+                'circle-stroke-opacity': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    4.99, 1,
+                    5, 0
+                ]
+            }
+            });
+        });
+
+
         loadCensusTract(cmauidSelected);
 
 	});
@@ -343,6 +409,9 @@
 <svelte:head>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
 </svelte:head>
+
+
+
 
 
 
@@ -439,6 +508,12 @@
 
             <div class="legend">
 
+                {#if (mapSelected === "Population Density")}
+
+                
+
+                {/if}
+
                 <p>Map created by Jeff Allen at the School of Cities. Data sources: Statistics Canada, OpenStreetMap, Mapbox</p>
 
             </div>
@@ -458,6 +533,7 @@
 	<div id="map"></div>
 
 </main>
+
 
 
 
