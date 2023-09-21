@@ -299,7 +299,14 @@
 				'text-color': '#AB1368',
 				'text-halo-color': 'rgba(255, 255, 255, 0.65)', 
 				'text-halo-width': 2,
-				'text-halo-blur': 1	
+				'text-halo-blur': 1,
+                'text-opacity':  [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    5.99, 0,
+                    6, 1
+                ]
 			}
             });
 
@@ -367,7 +374,21 @@
                 'circle-radius': 6,
                 'circle-color': '#1E3765',
                 'circle-stroke-width': 2,
-                'circle-stroke-color': '#fff'
+                'circle-stroke-color': '#fff',
+                'circle-opacity': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    4.99, 1,
+                    5, 0
+                ],
+                'circle-stroke-opacity': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    4.99, 1,
+                    5, 0
+                ]
             }
             });
         });
@@ -388,6 +409,9 @@
 <svelte:head>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
 </svelte:head>
+
+
+
 
 
 
@@ -509,6 +533,7 @@
 	<div id="map"></div>
 
 </main>
+
 
 
 
