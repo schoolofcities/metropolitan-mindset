@@ -400,10 +400,27 @@
         });
 
         map.on("click", "cmaPoints", (e) => {
-            console.log(e.features[0]);
             cmaSelectMapUpdate(e.features[0].properties.cmaname);
-            console.log(cmauidSelected, mapSelected);
             $: layerSet(cmauidSelected, mapSelected);
+        });
+
+        map.on("mouseenter", "metro-mindset-cma-2021-bg-all-fill", (e) => {
+            if (cmaSelected !== e.features[0].properties.CMANAME) {
+                map.getCanvas().style.cursor = "pointer";
+            }
+        });
+
+        map.on("mouseleave", "metro-mindset-cma-2021-bg-all-fill", (e) => {
+            map.getCanvas().style.cursor = "";
+        });
+
+        map.on("click", "metro-mindset-cma-2021-bg-all-fill", (e) => {
+            if (e.features[0].properties.CMANAME !== cmaSelected) {
+                console.log(e.features[0]);
+                cmaSelectMapUpdate(e.features[0].properties.CMANAME);
+                console.log(cmauidSelected, mapSelected);
+                $: layerSet(cmauidSelected, mapSelected);
+            }
         });
 
         loadCensusTract(cmauidSelected);
