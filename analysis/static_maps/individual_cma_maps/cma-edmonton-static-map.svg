@@ -10,7 +10,7 @@
    xml:space="preserve"
    inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    sodipodi:docname="cma-edmonton-static-map.svg"
-   inkscape:export-filename="cma-edmonton-static-map-v3.png"
+   inkscape:export-filename="../cma-edmonton-static-map.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -30,15 +30,15 @@
      showgrid="false"
      showborder="true"
      borderlayer="true"
-     inkscape:zoom="6.5981186"
-     inkscape:cx="621.84393"
-     inkscape:cy="450.35565"
+     inkscape:zoom="0.89143443"
+     inkscape:cx="399.35635"
+     inkscape:cy="355.04575"
      inkscape:window-width="1512"
      inkscape:window-height="825"
      inkscape:window-x="0"
      inkscape:window-y="38"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer3"><inkscape:grid
+     inkscape:current-layer="layer1"><inkscape:grid
        type="xygrid"
        id="grid9"
        originx="0"
@@ -291,7 +291,7 @@
          id="tspan233-6"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:'TradeGothic LT Bold';-inkscape-font-specification:'TradeGothic LT Bold,  Bold';fill:#1e3765;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.265;stroke-dasharray:none"
          x="18.838333"
-         y="35.746262">Census Metrpolitan Area</tspan></text><text
+         y="35.746262">Census Metropolitan Area</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:'TradeGothic LT Bold';-inkscape-font-specification:'TradeGothic LT Bold, ';display:inline;fill:#1e3765;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.265;stroke-dasharray:none"
        x="18.415001"
