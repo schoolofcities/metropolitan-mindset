@@ -2,13 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="7in"
-   height="4in"
-   viewBox="0 0 177.80035 101.6002"
+   width="7.5in"
+   height="7.75in"
+   viewBox="0 0 190.50038 196.85039"
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (1:1.3+202307231459+0e150ed6c4)"
    sodipodi:docname="chart-3-central-city.svg"
+   inkscape:export-filename="chart-3-central-city.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,11 +27,11 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="in"
      showgrid="false"
-     inkscape:zoom="1.0922955"
-     inkscape:cx="335.98968"
-     inkscape:cy="214.6855"
+     inkscape:zoom="1"
+     inkscape:cx="445"
+     inkscape:cy="420"
      inkscape:window-width="1920"
-     inkscape:window-height="1043"
+     inkscape:window-height="1016"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -38,8 +41,8 @@
        units="in"
        originx="0"
        originy="0"
-       spacingx="6.3500125"
-       spacingy="6.3500125"
+       spacingx="2.540005"
+       spacingy="2.540005"
        empcolor="#0099e5"
        empopacity="0.30196078"
        color="#0099e5"
@@ -56,104 +59,1168 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+       id="rect62"
+       width="190.50038"
+       height="196.85037"
+       x="6.2670193e-07"
+       y="6.2670193e-07" />
+    <rect
+       style="fill:#00a189;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-51"
+       width="69.878082"
+       height="5.0927658"
+       x="30.480061"
+       y="20.313339" />
+    <rect
+       style="opacity:0.15;fill:#00a189;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-5-5-2-7-9-6-0-6-8-0-7"
+       width="85.06221"
+       height="5.0860562"
+       x="100.35815"
+       y="20.320049" />
     <text
        xml:space="preserve"
-       style="font-size:3.88056px;line-height:1.3;font-family:sans-serif;stroke-width:0.264584"
-       x="16.299417"
-       y="10.07097"
-       id="text51"><tspan
+       style="font-size:4.23334px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="12.815785"
+       y="24.344202"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5"><tspan
          sodipodi:role="line"
-         id="tspan51"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:'TradeGothic LT Bold';-inkscape-font-specification:'TradeGothic LT Bold, ';stroke-width:0.264584"
-         x="16.299417"
-         y="10.07097">Toronto</tspan></text>
-    <rect
-       style="fill:#cccccc;fill-rule:evenodd;stroke-width:0.426848;stroke-linecap:round"
-       id="rect51"
-       width="139.70026"
-       height="4.678956"
-       x="31.750063"
-       y="6.3500123" />
-    <rect
-       style="fill:#cccccc;fill-rule:evenodd;stroke-width:0.364017;stroke-linecap:round"
-       id="rect51-0"
-       width="101.6002"
-       height="4.678956"
-       x="31.750061"
-       y="15.707925" />
-    <rect
-       style="fill:#cccccc;fill-rule:evenodd;stroke-width:0.240775;stroke-linecap:round"
-       id="rect51-9"
-       width="44.450085"
-       height="4.678956"
-       x="31.750061"
-       y="25.065836" />
-    <rect
-       style="fill:#cccccc;fill-rule:evenodd;stroke-width:0.211562;stroke-linecap:round"
-       id="rect51-0-3"
-       width="34.318356"
-       height="4.678956"
-       x="31.750057"
-       y="34.423744" />
-    <rect
-       style="fill:#666666;fill-rule:evenodd;stroke-width:0.319268;stroke-linecap:round"
-       id="rect51-0-3-6"
-       width="78.155869"
-       height="4.678956"
-       x="31.750063"
-       y="6.3500128" />
-    <rect
-       style="fill:#cccccc;fill-rule:evenodd;stroke-width:0.182009;stroke-linecap:round"
-       id="rect51-9-2"
-       width="25.400051"
-       height="4.678956"
-       x="31.750061"
-       y="43.781662" />
-    <rect
-       style="fill:#cccccc;fill-rule:evenodd;stroke-width:0.157624;stroke-linecap:round"
-       id="rect51-0-3-5"
-       width="19.050041"
-       height="4.678956"
-       x="31.750057"
-       y="53.139565" />
-    <rect
-       style="fill:#cccccc;fill-rule:evenodd;stroke-width:0.157623;stroke-linecap:round"
-       id="rect51-0-3-5-8"
-       width="19.050037"
-       height="4.678956"
-       x="31.750063"
-       y="62.497482" />
-    <rect
-       style="fill:#cccccc;fill-rule:evenodd;stroke-width:0.149597;stroke-linecap:round"
-       id="rect51-9-2-7"
-       width="17.159168"
-       height="4.678956"
-       x="31.750067"
-       y="71.8554" />
-    <rect
-       style="fill:#cccccc;fill-rule:evenodd;stroke-width:0.149597;stroke-linecap:round"
-       id="rect51-0-3-5-9"
-       width="17.159172"
-       height="4.678956"
-       x="31.750063"
-       y="81.21331" />
-    <rect
-       style="fill:#cccccc;fill-rule:evenodd;stroke-width:0.128699;stroke-linecap:round"
-       id="rect51-0-3-5-8-1"
-       width="12.700019"
-       height="4.678956"
-       x="31.750067"
-       y="90.571228" />
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="12.815785"
+         y="24.344202"
+         id="tspan17-8">Toronto</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.88056px;line-height:1.3;font-family:sans-serif;fill:#f9f9f9;stroke-width:0.264584"
-       x="63.608292"
-       y="10.090373"
-       id="text52"><tspan
+       style="font-size:4.23334px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="17.307508"
+       y="10.118679"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-95"><tspan
          sodipodi:role="line"
-         id="tspan52"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:'TradeGothic LT Bold';-inkscape-font-specification:'TradeGothic LT Bold, ';fill:#f9f9f9;stroke-width:0.264584"
-         x="63.608292"
-         y="10.090373">45%</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="17.307508"
+         y="10.118679"
+         id="tspan17-8-85">CMA</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23334px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="30.26095"
+       y="10.194746"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-95-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="30.26095"
+         y="10.194746"
+         id="tspan17-8-85-1">Percent of Population in the Central City in each CMA</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="30.480061"
+       y="19.074284"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="30.480061"
+         y="19.074284"
+         id="tspan17-8-9">City of Toronto</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="95.792465"
+       y="29.058498"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-0"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="95.792465"
+         y="29.058498"
+         id="tspan17-8-9-9">6,202,225 people</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="46.901505"
+       y="229.93222"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="46.901505"
+         y="229.93222"
+         id="tspan16">Toronto      Montreal      Vancouver      Ottawa-        Calgary       Edmonton      Winnipeg      Quebec      Hamilton      Kitchener-</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="46.901505"
+         y="234.51834"
+         id="tspan17" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="99.536072"
+       y="233.73499"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-38"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="99.536072"
+         y="233.73499"
+         id="tspan17-8-3">Gatineau</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="203.20039"
+       y="233.76942"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="203.20039"
+         y="233.76942"
+         id="tspan18">Cambridge-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="203.20039"
+       y="237.58769"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-1-5"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="203.20039"
+         y="237.58769"
+         id="tspan18-4">Waterloo</tspan></text>
+    <g
+       id="g19"
+       transform="matrix(1.000002,0,0,1.000002,38.100076,125.81922)">
+      <rect
+         style="fill:#00a189;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8-51-6"
+         width="2.208652"
+         height="12.699997"
+         x="6.349999"
+         y="101.6" />
+      <rect
+         style="fill:#6d247a;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8-51-6-3"
+         width="2.208652"
+         height="12.699997"
+         x="21.81624"
+         y="101.6" />
+      <rect
+         style="fill:#dc4633;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8-51-6-3-2"
+         width="2.208652"
+         height="12.699997"
+         x="39.17683"
+         y="101.6" />
+      <rect
+         style="fill:#8dbf2e;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8-51-6-3-2-9"
+         width="2.208652"
+         height="12.699997"
+         x="58.79702"
+         y="101.6" />
+      <rect
+         style="fill:#0d534d;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8-51-6-3-2-9-6"
+         width="2.208652"
+         height="12.699997"
+         x="76.221687"
+         y="101.6" />
+      <rect
+         style="fill:#007fa3;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8-51-6-3-2-9-6-0"
+         width="2.208652"
+         height="12.699997"
+         x="92.550552"
+         y="101.6" />
+      <rect
+         style="fill:#1e3765;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8-51-6-3-2-9-6-0-0"
+         width="2.208652"
+         height="12.699997"
+         x="111.41568"
+         y="101.6" />
+      <rect
+         style="fill:#ab1368;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8-51-6-3-2-9-6-0-0-2"
+         width="2.208652"
+         height="12.699997"
+         x="129.56831"
+         y="101.6" />
+      <rect
+         style="fill:#f1c500;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8-51-6-3-2-9-6-0-0-2-1"
+         width="2.208652"
+         height="12.699997"
+         x="144.96556"
+         y="101.6" />
+      <rect
+         style="fill:#6fc7ea;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8-51-6-3-2-9-6-0-0-2-1-8"
+         width="2.208652"
+         height="12.699997"
+         x="162.48491"
+         y="101.6" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+       x="61.177315"
+       y="24.113741"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+         x="61.177315"
+         y="24.113741"
+         id="tspan17-8-8">45.1%</tspan></text>
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 30.480129,27.940064 H 93.980184"
+       id="path8"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 121.92024,27.940064 h 63.50012"
+       id="path8-7"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 30.480124,45.72009 H 93.980176"
+       id="path8-78"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 121.92024,45.72009 h 63.50012"
+       id="path8-7-7"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 30.480118,63.500125 H 93.980166"
+       id="path8-78-0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 121.92024,63.500125 h 63.50012"
+       id="path8-7-7-9"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 30.480118,81.28016 H 93.980171"
+       id="path8-78-0-4"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 121.92024,81.28016 h 63.50012"
+       id="path8-7-7-9-8"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#6d247a;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-51-66"
+       width="69.103378"
+       height="5.0793467"
+       x="30.480061"
+       y="38.100414" />
+    <rect
+       style="opacity:0.15;fill:#6d247a;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-5-5-2-7-9-6-0-6-8-0-7-6"
+       width="85.836929"
+       height="5.0827017"
+       x="99.583427"
+       y="38.100414" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23334px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="25.802176"
+       y="42.206921"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-8"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="25.802176"
+         y="42.206921"
+         id="tspan53">Montréal</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="30.183016"
+       y="36.854649"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-5"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="30.183016"
+         y="36.854649"
+         id="tspan17-8-9-4">Ville de Montréal</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="95.657471"
+       y="46.979103"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-0-6"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="95.657471"
+         y="46.979103"
+         id="tspan17-8-9-9-1">4,291,732 people</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+       x="60.789963"
+       y="41.894108"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-8"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+         x="60.789963"
+         y="41.894108"
+         id="tspan17-8-8-9">44.6%</tspan></text>
+    <path
+       style="fill:none;stroke:#ececec;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 27.940055,33.020073 v 15.24003"
+       id="path54" />
+    <path
+       style="fill:none;stroke:#ececec;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 27.940055,15.240038 V 30.480069"
+       id="path54-8" />
+    <path
+       style="fill:none;stroke:#ececec;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 27.940054,4.4974578 0,8.2025672"
+       id="path54-8-8"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#dc4633;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-51-8"
+       width="38.890018"
+       height="5.0793471"
+       x="30.480061"
+       y="55.880119" />
+    <rect
+       style="opacity:0.15;fill:#dc4633;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-5-5-2-7-9-6-0-6-8-0-7-2"
+       width="116.05028"
+       height="5.0827017"
+       x="69.370071"
+       y="55.880119" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23334px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="7.7250075"
+       y="59.904274"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-11"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="7.7250075"
+         y="59.904274"
+         id="tspan17-8-83">Vancouver</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="30.480061"
+       y="54.634354"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-8"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="30.480061"
+         y="54.634354"
+         id="tspan17-8-9-6">City of Vancouver</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="95.639381"
+       y="64.758804"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-0-0"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="95.639381"
+         y="64.758804"
+         id="tspan17-8-9-9-8">2,642,825 people</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+       x="45.665195"
+       y="59.673813"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-3"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+         x="45.665195"
+         y="59.673813"
+         id="tspan17-8-8-6">25.1%</tspan></text>
+    <rect
+       style="fill:#8dbf2e;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-51-66-3"
+       width="105.97917"
+       height="5.0793467"
+       x="30.480061"
+       y="73.660484" />
+    <rect
+       style="opacity:0.15;fill:#8dbf2e;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-5-5-2-7-9-6-0-6-8-0-7-6-5"
+       width="48.961132"
+       height="5.0793467"
+       x="136.45923"
+       y="73.660484" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23334px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="25.802176"
+       y="74.879738"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-8-0"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="25.802176"
+         y="74.879738"
+         id="tspan53-9">Ottawa-</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="25.802176"
+         y="80.530212"
+         id="tspan57">Gatineau</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="30.183016"
+       y="72.414719"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-5-3"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="30.183016"
+         y="72.414719"
+         id="tspan17-8-9-4-7">City of Ottawa </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="95.573067"
+       y="82.539169"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-0-6-7"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="95.573067"
+         y="82.539169"
+         id="tspan17-8-9-9-1-1">1,488,307 people</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="79.180489"
+       y="77.454178"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-8-9"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="79.180489"
+         y="77.454178"
+         id="tspan17-8-8-9-3">68.4%</tspan></text>
+    <path
+       style="fill:none;stroke:#ececec;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 27.940055,68.580142 v 15.24003"
+       id="path54-6" />
+    <path
+       style="fill:none;stroke:#ececec;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 27.940055,50.800108 v 15.24003"
+       id="path54-8-5" />
+    <rect
+       style="fill:#0d534d;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-51-5"
+       width="136.65735"
+       height="5.0793462"
+       x="30.480059"
+       y="91.440186" />
+    <rect
+       style="opacity:0.15;fill:#0d534d;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-5-5-2-7-9-6-0-6-8-0-7-7"
+       width="18.282928"
+       height="5.0793471"
+       x="167.13741"
+       y="91.440186" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23334px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="12.648746"
+       y="95.46434"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-9"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="12.648746"
+         y="95.46434"
+         id="tspan17-8-1">Calgary</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="30.29747"
+       y="90.194427"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-3"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="30.29747"
+         y="90.194427"
+         id="tspan17-8-9-47">City of Calgary</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="95.6101"
+       y="100.31888"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-0-4"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="95.6101"
+         y="100.31888"
+         id="tspan17-8-9-9-9">1,481,806 people</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+       x="94.526466"
+       y="95.233879"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-6"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+         x="94.526466"
+         y="95.233879"
+         id="tspan17-8-8-85">88.2%</tspan></text>
+    <rect
+       style="fill:#007fa3;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-51-66-1"
+       width="110.47243"
+       height="5.0793467"
+       x="30.480059"
+       y="109.22056" />
+    <rect
+       style="opacity:0.15;fill:#007fa3;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-5-5-2-7-9-6-0-6-8-0-7-6-9"
+       width="44.467876"
+       height="5.0796719"
+       x="140.95248"
+       y="109.20452" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23334px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="25.802174"
+       y="113.32706"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-8-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="25.802174"
+         y="113.32706"
+         id="tspan53-91">Edmonton</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="30.183014"
+       y="107.97479"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-5-34"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="30.183014"
+         y="107.97479"
+         id="tspan17-8-9-4-9">City of Edmonton</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="95.755417"
+       y="118.09924"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-0-6-8"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="95.755417"
+         y="118.09924"
+         id="tspan17-8-9-9-1-17">1,418,118 people</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+       x="81.427116"
+       y="113.01425"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-8-0"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+         x="81.427116"
+         y="113.01425"
+         id="tspan17-8-8-9-32">71.3%</tspan></text>
+    <path
+       style="fill:none;stroke:#ececec;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 27.940055,104.14022 v 15.24002"
+       id="path54-3" />
+    <path
+       style="fill:none;stroke:#ececec;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 27.940055,86.360177 V 101.60021"
+       id="path54-8-7" />
+    <rect
+       style="fill:#ab1368;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-51-8-8"
+       width="101.4859"
+       height="5.0793467"
+       x="30.480059"
+       y="127.00058" />
+    <rect
+       style="opacity:0.15;fill:#ab1368;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-5-5-2-7-9-6-0-6-8-0-7-2-4"
+       width="53.454369"
+       height="5.0796747"
+       x="131.96596"
+       y="127.00025" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23334px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="12.996734"
+       y="130.64615"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-11-7"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="12.996734"
+         y="130.64615"
+         id="tspan17-8-83-3">Québec</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="30.480061"
+       y="125.7545"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-8-6"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="30.480061"
+         y="125.7545"
+         id="tspan17-8-9-6-3">Ville de Québec</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="97.076607"
+       y="135.87894"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-0-0-6"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="97.076607"
+         y="135.87894"
+         id="tspan17-8-9-9-8-9">839,311 people</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+       x="76.933853"
+       y="130.79395"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-3-2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+         x="76.933853"
+         y="130.79395"
+         id="tspan17-8-8-6-0">65.5%</tspan></text>
+    <rect
+       style="fill:#1e3765;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-51-66-3-5"
+       width="139.1364"
+       height="5.0793462"
+       x="30.480059"
+       y="144.78061" />
+    <rect
+       style="opacity:0.15;fill:#1e3765;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-5-5-2-7-9-6-0-6-8-0-7-6-5-5"
+       width="15.506854"
+       height="5.0793462"
+       x="169.61646"
+       y="144.78061" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23334px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="25.817379"
+       y="148.6463"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-8-0-4"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="25.817379"
+         y="148.6463"
+         id="tspan53-9-9">Winnipeg</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="30.183014"
+       y="143.53485"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-5-3-4"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="30.183014"
+         y="143.53485"
+         id="tspan17-8-9-4-7-0">City of Winnipeg</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="97.076607"
+       y="153.6593"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-0-6-7-4"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="97.076607"
+         y="153.6593"
+         id="tspan17-8-9-9-1-1-0">834,678 people</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+       x="95.765991"
+       y="148.57431"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-8-9-5"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264584"
+         x="95.765991"
+         y="148.57431"
+         id="tspan17-8-8-9-3-0">89.8%</tspan></text>
+    <path
+       style="fill:none;stroke:#ececec;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 27.940055,139.70027 V 154.9403"
+       id="path54-6-6" />
+    <path
+       style="fill:none;stroke:#ececec;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 27.940055,121.92024 v 15.24003"
+       id="path54-8-5-2" />
+    <rect
+       style="fill:#f1c500;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-51-8-8-7"
+       width="112.33173"
+       height="5.0793467"
+       x="30.480059"
+       y="162.56065" />
+    <rect
+       style="opacity:0.15;fill:#f1c500;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-5-5-2-7-9-6-0-6-8-0-7-2-4-1"
+       width="42.608532"
+       height="5.0796795"
+       x="142.8118"
+       y="162.56032" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23334px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="10.366712"
+       y="166.66716"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-11-7-4"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="10.366712"
+         y="166.66716"
+         id="tspan17-8-83-3-9">Hamilton</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="30.480061"
+       y="161.31456"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-8-6-9"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="30.480061"
+         y="161.31456"
+         id="tspan17-8-9-6-3-0">City of Hamilton</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="97.10331"
+       y="171.43901"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-0-0-6-6"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="97.10331"
+         y="171.43901"
+         id="tspan17-8-9-9-8-9-4">785,184 people</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="82.390358"
+       y="166.354"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-3-2-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="82.390358"
+         y="166.354"
+         id="tspan17-8-8-6-0-0">72.5%</tspan></text>
+    <rect
+       style="fill:#6fc7ea;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-51-66-3-5-6"
+       width="69.103378"
+       height="5.0793467"
+       x="30.480059"
+       y="180.34035" />
+    <rect
+       style="opacity:0.15;fill:#6fc7ea;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-5-5-2-7-9-6-0-6-8-0-7-6-5-5-9"
+       width="85.74205"
+       height="5.0987558"
+       x="99.583435"
+       y="180.32094" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23334px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="25.802174"
+       y="178.79672"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-8-0-4-4"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="25.802174"
+         y="178.79672"
+         id="tspan52-4-2-1">Kitchener-</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="25.802174"
+         y="184.44719"
+         id="tspan54-4-5-4">Cambridge-</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23334px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="25.802174"
+         y="190.09767"
+         id="tspan53-9-9-5">Waterloo</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="30.183014"
+       y="179.09492"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-5-3-4-6"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="30.183014"
+         y="179.09492"
+         id="tspan17-8-9-4-7-0-7">City of Kitchener</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+       x="97.068001"
+       y="189.21938"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-0-6-7-4-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264584"
+         x="97.068001"
+         y="189.21938"
+         id="tspan17-8-9-9-1-1-0-6">575,847 people</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+       x="60.789959"
+       y="184.13438"
+       id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-8-9-5-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264584"
+         x="60.789959"
+         y="184.13438"
+         id="tspan17-8-8-9-3-0-9">44.6%</tspan></text>
+    <g
+       id="g61"
+       style="fill:#999999">
+      <text
+         xml:space="preserve"
+         style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="157.20328"
+         y="19.038111"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-4"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="157.20328"
+           y="19.038111"
+           id="tspan17-8-9-1">Other Municipalities</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="141.04205"
+         y="24.133141"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-0"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="141.04205"
+           y="24.133141"
+           id="tspan17-8-8-8">54.9%</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="157.20328"
+         y="36.818478"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-4-7"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="157.20328"
+           y="36.818478"
+           id="tspan17-8-9-1-3">Other Municipalities</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="140.24313"
+         y="41.913509"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-0-9"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="140.24313"
+           y="41.913509"
+           id="tspan17-8-8-8-9">55.4%</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="157.20328"
+         y="54.598179"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-4-0"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="157.20328"
+           y="54.598179"
+           id="tspan17-8-9-1-7">Other Municipalities</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="123.13964"
+         y="59.693214"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-0-5"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="123.13964"
+           y="59.693214"
+           id="tspan17-8-8-8-5">74.9%</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="157.20326"
+         y="72.378548"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-4-7-5"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="157.20326"
+           y="72.378548"
+           id="tspan17-8-9-1-3-6">Other Municipalities</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="156.67992"
+         y="77.473579"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-0-9-8"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="156.67992"
+           y="77.473579"
+           id="tspan17-8-8-8-9-0">31.6%</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="157.20326"
+         y="90.158249"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-4-4"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="157.20326"
+           y="90.158249"
+           id="tspan17-8-9-1-4">Other Municipalities</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="171.98799"
+         y="95.253281"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-0-98"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="171.98799"
+           y="95.253281"
+           id="tspan17-8-8-8-52">11.8%</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="157.20326"
+         y="107.93862"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-4-7-9"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="157.20326"
+           y="107.93862"
+           id="tspan17-8-9-1-3-3">Other Municipalities</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="160.04803"
+         y="113.03365"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-0-9-6"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="160.04803"
+           y="113.03365"
+           id="tspan17-8-8-8-9-5">28.7%</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="157.20325"
+         y="125.71832"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-4-0-2"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="157.20325"
+           y="125.71832"
+           id="tspan17-8-9-1-7-7">Other Municipalities</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="155.42932"
+         y="130.81334"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-0-5-8"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="155.42932"
+           y="130.81334"
+           id="tspan17-8-8-8-5-4">34.5%</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="156.90623"
+         y="143.49867"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-4-7-5-5"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="156.90623"
+           y="143.49867"
+           id="tspan17-8-9-1-3-6-3">Other Municipalities</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="173.07899"
+         y="148.5937"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-0-9-8-2"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="173.07899"
+           y="148.5937"
+           id="tspan17-8-8-8-9-0-3">10.2%</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="157.20326"
+         y="161.15372"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-4-0-2-5"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="157.20326"
+           y="161.15372"
+           id="tspan17-8-9-1-7-7-1">Other Municipalities</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="159.85619"
+         y="166.37341"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-0-5-8-6"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="159.85619"
+           y="166.37341"
+           id="tspan17-8-8-8-5-4-2">27.5%</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="157.10841"
+         y="179.05875"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-5-4-7-5-5-5"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="157.10841"
+           y="179.05875"
+           id="tspan17-8-9-1-3-6-3-4">Other Municipalities</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.52779px;line-height:1.3;font-family:sans-serif;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+         x="138.16357"
+         y="184.15378"
+         id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-0-9-2-0-7-5-3-0-9-8-2-7"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52779px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#999999;fill-opacity:1;stroke-width:0.264584"
+           x="138.16357"
+           y="184.15378"
+           id="tspan17-8-8-8-9-0-3-0">55.4%</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#ececec;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 27.940055,175.26034 v 15.24003"
+       id="path54-6-6-1" />
+    <path
+       style="fill:none;stroke:#ececec;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 27.940055,157.48031 v 15.24003"
+       id="path54-8-5-2-1" />
+    <rect
+       style="opacity:0.33;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#4d4d4d;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+       id="rect61"
+       width="154.94031"
+       height="2.6425719"
+       x="30.480061"
+       y="-5.1825767" />
+    <path
+       style="fill:#f9f9f9;stroke:#ffffff;stroke-width:0.529168;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 100.35815,20.320049 -10e-6,5.086056"
+       id="path61" />
+    <path
+       style="fill:#f9f9f9;stroke:#ffffff;stroke-width:0.529168;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 99.58344,38.097061 -10e-6,5.086056"
+       id="path61-7" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.529168;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 69.370084,55.876764 -1e-5,5.086056"
+       id="path61-7-0" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.529168;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 136.48858,73.653774 -1e-5,5.086056"
+       id="path61-7-0-4" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.529168;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 167.13741,91.43683 -10e-6,5.086056"
+       id="path61-7-0-4-0" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.529168;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 140.95249,109.19813 -1e-5,5.08606"
+       id="path61-7-0-4-0-8" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.529168;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 131.96596,126.99706 -1e-5,5.08606"
+       id="path61-7-0-4-0-8-8" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.529168;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 169.61646,144.77725 -1e-5,5.08606"
+       id="path61-7-0-4-0-8-8-0" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.529168;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 142.8118,162.5573 -1e-5,5.08606"
+       id="path61-7-0-4-0-8-8-6" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.529168;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 99.583445,180.33363 -1e-5,5.08606"
+       id="path61-7-0-4-0-8-8-6-6" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 30.480116,99.060194 H 93.980165"
+       id="path8-78-0-0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 121.92024,99.060194 h 63.50012"
+       id="path8-7-7-9-6"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 30.480117,116.84023 H 93.980166"
+       id="path8-78-0-09"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 121.92024,116.84023 h 63.50012"
+       id="path8-7-7-9-7"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 30.480113,134.62027 64.770076,-5.5e-4"
+       id="path8-78-0-09-7"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 120.68333,134.62027 h 64.73703"
+       id="path8-7-7-9-7-2"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 30.480059,152.4003 64.77008,-5.5e-4"
+       id="path8-78-0-09-7-6"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 120.68328,152.4003 h 64.73703"
+       id="path8-7-7-9-7-2-7"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 30.480059,170.18033 64.77008,-5.5e-4"
+       id="path8-78-0-09-7-4"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 120.68328,170.18033 h 64.73703"
+       id="path8-7-7-9-7-2-4"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 30.480059,187.96037 64.770076,-5.5e-4"
+       id="path8-78-0-09-7-62"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 120.68328,187.96037 h 64.73703"
+       id="path8-7-7-9-7-2-3"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>

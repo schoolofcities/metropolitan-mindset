@@ -25,8 +25,8 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="1.4877997"
-     inkscape:cx="400.59156"
-     inkscape:cy="235.91886"
+     inkscape:cx="338.08315"
+     inkscape:cy="285.65673"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -56,6 +56,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79375;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect20"
+       width="190.5"
+       height="127"
+       x="0"
+       y="0" />
     <g
        id="g1"
        transform="matrix(0,0.48736209,-2.1974282,0,300.75819,37.878254)">
@@ -934,7 +941,7 @@
          x="155.31042"
          y="19.049999" />
       <rect
-         style="fill:#e6e6e6;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.323081;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#cccccc;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.323081;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect8-5-5-2-7-9-6-0-6-8-0"
          width="111.91875"
          height="12.7"
@@ -952,7 +959,7 @@
        id="path8-6"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:#e6e6e6;fill-opacity:1;stroke:#cccccc;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.803922"
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#cccccc;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 108.98239,40.954973 75.1676,0.0091"
        id="path8-6-7"
        sodipodi:nodetypes="cc" />
@@ -1110,12 +1117,12 @@
          id="tspan1-66-3-5-3-3-4-5-5-6">4.0%</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#cccccc;fill-opacity:1;stroke-width:0.264583"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#b3b3b3;fill-opacity:1;stroke-width:0.264583"
        x="142.37857"
        y="44.450001"
        id="text1-47-3-5-6-3-8-2-9-0-4-7-2"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cccccc;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#b3b3b3;fill-opacity:1;stroke-width:0.264583"
          x="142.37857"
          y="44.450001"
          id="tspan1-66-3-5-3-3-4-5-5-6-8">42.3%</tspan></text>
@@ -1402,7 +1409,7 @@
          x="237.13992"
          y="20.554745" />
       <rect
-         style="fill:#e6e6e6;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.394316;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#cccccc;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.394316;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
          id="rect8-5-5-2-7-9-6-0-6-8-0-7"
          width="157.80508"
          height="12.7"
@@ -1420,7 +1427,7 @@
        id="path8-6-3"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:#e6e6e6;fill-opacity:1;stroke:#cccccc;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.803922"
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#cccccc;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 112.97026,91.74511 184.14999,91.7279"
        id="path8-6-7-1"
        sodipodi:nodetypes="cc" />
@@ -1431,12 +1438,12 @@
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#cccccc;fill-opacity:1;stroke-width:0.264583"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#b3b3b3;fill-opacity:1;stroke-width:0.264583"
        x="144.31834"
        y="95.213821"
        id="text1-47-3-5-6-3-8-2-9-0-4-7-2-5"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cccccc;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#b3b3b3;fill-opacity:1;stroke-width:0.264583"
          x="144.31834"
          y="95.213821"
          id="tspan1-66-3-5-3-3-4-5-5-6-8-4">40.0%</tspan></text>
@@ -1464,12 +1471,12 @@
          id="tspan1-66-3-5-3-3-4-5-5-6-3-5-1-85-4-2">Top 10 CMAs</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#cccccc;fill-opacity:1;stroke-width:0.264583"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#b3b3b3;fill-opacity:1;stroke-width:0.264583"
        x="112.87383"
        y="95.283585"
        id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-8-8-3-9"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cccccc;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#b3b3b3;fill-opacity:1;stroke-width:0.264583"
          x="112.87383"
          y="95.283585"
          id="tspan1-66-3-5-3-3-4-5-5-6-3-5-1-85-4-2-3">Rest of Canada</tspan></text>
@@ -1486,12 +1493,12 @@
          id="tspan1-66-3-5-3-3-4-5-5-6-3-5-1-85-4-2-2">Top 10 CMAs</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#cccccc;fill-opacity:1;stroke-width:0.264583"
+       style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#b3b3b3;fill-opacity:1;stroke-width:0.264583"
        x="108.74986"
        y="44.519764"
        id="text1-47-3-5-6-3-8-2-9-0-4-7-1-8-7-8-8-3-9-5"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cccccc;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#b3b3b3;fill-opacity:1;stroke-width:0.264583"
          x="108.74986"
          y="44.519764"
          id="tspan1-66-3-5-3-3-4-5-5-6-3-5-1-85-4-2-3-5">Rest of Canada</tspan></text>
