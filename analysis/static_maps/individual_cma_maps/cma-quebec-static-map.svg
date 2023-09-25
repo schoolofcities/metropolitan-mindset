@@ -10,7 +10,7 @@
    xml:space="preserve"
    inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    sodipodi:docname="cma-quebec-static-map.svg"
-   inkscape:export-filename="cma-quebec-static-map-v3.png"
+   inkscape:export-filename="../cma-quebec-static-map.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -31,14 +31,14 @@
      showborder="true"
      borderlayer="true"
      inkscape:zoom="1.2774437"
-     inkscape:cx="385.92698"
-     inkscape:cy="863.83453"
+     inkscape:cx="396.10356"
+     inkscape:cy="248.54324"
      inkscape:window-width="1512"
      inkscape:window-height="825"
      inkscape:window-x="0"
      inkscape:window-y="38"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer3"><inkscape:grid
+     inkscape:current-layer="layer1"><inkscape:grid
        type="xygrid"
        id="grid9"
        originx="0"
@@ -106,6 +106,7 @@
      inkscape:label="Quebec"
      inkscape:groupmode="layer"
      id="layer1"
+     style="display:inline"
      sodipodi:insensitive="true"><path
        style="display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.439999;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        d="m 13.163397,246.88472 0.01714,19.31037 189.921043,-0.0281 0.006,-19.1303 z"
@@ -271,7 +272,7 @@
          id="tspan233-6"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:'TradeGothic LT Bold';-inkscape-font-specification:'TradeGothic LT Bold,  Bold';fill:#1e3765;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.265;stroke-dasharray:none"
          x="18.838333"
-         y="35.746262">Census Metrpolitan Area</tspan></text><text
+         y="35.746262">Census Metropolitan Area</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:'TradeGothic LT Bold';-inkscape-font-specification:'TradeGothic LT Bold, ';display:inline;fill:#1e3765;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.265;stroke-dasharray:none"
        x="18.415001"
