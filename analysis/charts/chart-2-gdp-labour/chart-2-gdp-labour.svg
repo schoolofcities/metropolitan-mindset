@@ -9,6 +9,9 @@
    id="svg1"
    inkscape:version="1.3 (1:1.3+202307231459+0e150ed6c4)"
    sodipodi:docname="chart-2-gdp-labour.svg"
+   inkscape:export-filename="chart-2-gdp-labour.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,11 +27,11 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="1.4877997"
-     inkscape:cx="338.08315"
-     inkscape:cy="285.65673"
-     inkscape:window-width="1920"
-     inkscape:window-height="1016"
+     inkscape:zoom="2.1040665"
+     inkscape:cx="362.63112"
+     inkscape:cy="223.13933"
+     inkscape:window-width="2560"
+     inkscape:window-height="1403"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -725,7 +728,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'TradeGothic LT Bold';-inkscape-font-specification:'TradeGothic LT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="6.0875335"
          y="9.4487972"
-         id="tspan4">Labour Force (2021)</tspan><tspan
+         id="tspan4">Labour Force in Canada (2021)</tspan><tspan
          sodipodi:role="line"
          style="font-size:3.52778px;stroke-width:0.264583"
          x="6.0875335"
@@ -741,7 +744,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'TradeGothic LT Bold';-inkscape-font-specification:'TradeGothic LT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="6.0875335"
          y="60.248798"
-         id="tspan4-2">GDP (2019)</tspan><tspan
+         id="tspan4-2">GDP for Canada (2019)</tspan><tspan
          sodipodi:role="line"
          style="font-size:3.52778px;stroke-width:0.264583"
          x="6.0875335"
@@ -750,17 +753,17 @@
     <text
        xml:space="preserve"
        style="font-size:3.52778px;line-height:1.3;font-family:sans-serif;fill:#666666;stroke-width:0.264583"
-       x="64.300354"
+       x="67.318832"
        y="15.311055"
        id="text1-47-3-5-6-3-8"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;stroke-width:0.264583"
-         x="64.300354"
+         x="67.318832"
          y="15.311055"
          id="tspan4-1">11,145,465 people in the labour force</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;stroke-width:0.264583"
-         x="64.300354"
+         x="67.318832"
          y="19.897169"
          id="tspan1-66-3-5-3" /></text>
     <text
@@ -950,7 +953,7 @@
     </g>
     <path
        style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 6.3499999,14.153503 63.236013,14.124039"
+       d="M 6.3499999,14.153503 66.273454,14.124039"
        id="path8"
        sodipodi:nodetypes="cc" />
     <path
@@ -965,7 +968,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#e6e6e6;stroke:#666666;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 117.93814,14.137608 66.21186,0.0159"
+       d="m 120.98809,14.137608 63.16191,0.0159"
        id="path8-7"
        sodipodi:nodetypes="cc" />
     <text
@@ -1224,7 +1227,7 @@
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264583"
          x="8.8014116"
          y="110.4628"
-         id="tspan16">Toronto      Montreal      Vancouver      Ottawa-        Calgary       Edmonton      Winnipeg      Quebec      Hamilton      Kitchener-</tspan><tspan
+         id="tspan16">Toronto      Montréal      Vancouver      Ottawa-        Calgary       Edmonton      Winnipeg      Québec      Hamilton      Kitchener-</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#666666;fill-opacity:1;stroke-width:0.264583"
          x="8.8014116"
