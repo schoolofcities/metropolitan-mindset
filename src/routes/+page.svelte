@@ -105,11 +105,15 @@
     const choropleths = {
         "population-density": {
             name: "Population Density",
-            breaks: [500, 2500, 5000, 7500],
+            breaks: [500, 3000, 6000],
             colours: ["#fffef8", "#fbefb5", "#f7dd66", "#f1c500"],
             // "colours": ["#fcfcfc", "#a4dcd4", "#4ebdad", "#00a189"]
-        },
+        }
     };
+
+    console.log(choropleths["population-density"].colours[0])
+
+    
 
     function layerSelect(e) {
         $: mapSelected = e.detail.value;
@@ -551,7 +555,30 @@
             <div class="bar" />
 
             <div class="legend">
-                {#if mapSelected === "Population Density"}{/if}
+                {#if mapSelected === "Population Density"}
+                
+                <div id="legend-wrapper">
+                    <svg id="legend-svg" height="130">
+                    
+                        <rect class="legend-box" x="10" y="30" width="15" height="15" fill="{choropleths["population-density"].colours[3]}" />
+                        <text x="30" y="42" class="legend-text" font-size="12" >6,000 people/km2 and up</text>
+                            
+                        <rect class="legend-box" x="10" y="50" width="15" height="15" fill="{choropleths["population-density"].colours[2]}" />
+                        <text x="30" y="62" class="legend-text" font-size="12" >3,000 to 6,000 people/km2</text>
+    
+                        <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["population-density"].colours[1]}" />
+                        <text x="30" y="82" class="legend-text" font-size="12" >500 to 3,000 people/km2</text>
+    
+                        <rect class="legend-box" x="10" y="90" width="15" height="15" fill="{choropleths["population-density"].colours[0]}" />
+                        <text x="30" y="102" class="legend-text" font-size="12" >less than 500 people/km2</text>
+    
+                        <rect class="legend-box" x="10" y="110" width="15" height="15" fill="#D0D1C9" />
+                        <text x="30" y="122" class="legend-text" font-size="12" >No Data: </text>
+    
+                    </svg>
+                </div>
+
+                {/if}
 
                 <p>
                     Map created by Jeff Allen at the School of Cities. Data
@@ -677,5 +704,25 @@
 
     input[type="checkbox"] {
         accent-color: var(--brandPink);
+    }
+
+    #legend {
+        background-color: white;
+    }
+
+    .legend-box {
+        stroke: rgb(181, 181, 181);
+        stroke-width: 0.5px;
+    }
+
+    .legend-bar {
+        fill: #efefef;
+        stroke: #cecece;
+        stroke-width: 0.5px;
+    }
+
+    .legend-text {
+        font-family: RobotoRegular;
+        fill: var(--brandGray80);
     }
 </style>
