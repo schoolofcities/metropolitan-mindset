@@ -99,7 +99,7 @@
 
     // Changing the map layer
 
-    let mapLayers = ["Street Map", "Satellite", "Population Density"];
+    let mapLayers = ["Street Map", "Satellite", "Population Density", "Median Household Income", "Dwellings"];
     let mapSelected = "Street Map";
 
     const choropleths = {
@@ -108,6 +108,16 @@
             breaks: [500, 3000, 6000],
             colours: ["#fffef8", "#fbefb5", "#f7dd66", "#f1c500"],
             // "colours": ["#fcfcfc", "#a4dcd4", "#4ebdad", "#00a189"]
+        },
+        "median-household-income": {
+            name: "Median Household Income",
+            breaks: [90000, 150000, 250000],
+            colours: ["#EDF1F7", "#C3D1E5", "#6F91C1", "#375681"],
+        },
+        "dwellings": {
+            name: "Dwellings",
+            breaks: [100, 2000, 4000],
+            colours: ["#EAEDDD", "#C6CEA2", "#94A256", "#5E6737"],
         }
     };
 
@@ -166,6 +176,80 @@
                                 choropleths["population-density"].colours[2],
                                 choropleths["population-density"].breaks[2],
                                 choropleths["population-density"].colours[3],
+                            ],
+                            "#cbcbcb",
+                        ],
+                    },
+                },
+                "transitStops"
+            );
+        } else if (layer === "Median Household Income") {
+            try {
+                map.removeLayer("ctPolygon");
+                map.removeSource("ctPolygon");
+            } catch {}
+            map.setPaintProperty("mapbox-satellite", "raster-opacity", 0.011);
+            map.addLayer(
+                {
+                    id: "ctPolygon",
+                    type: "fill",
+                    source: {
+                        type: "geojson",
+                        data: ctPolygon,
+                    },
+                    paint: {
+                        "fill-outline-color": "white",
+                        "fill-opacity": 0.881,
+                        "fill-color": [
+                            "case",
+                            ["!=", ["get", "MedHhldIncome"], null],
+                            [
+                                "step",
+                                ["get", "MedHhldIncome"],
+                                choropleths["median-household-income"].colours[0],
+                                choropleths["median-household-income"].breaks[0],
+                                choropleths["median-household-income"].colours[1],
+                                choropleths["median-household-income"].breaks[1],
+                                choropleths["median-household-income"].colours[2],
+                                choropleths["median-household-income"].breaks[2],
+                                choropleths["median-household-income"].colours[3],
+                            ],
+                            "#cbcbcb",
+                        ],
+                    },
+                },
+                "transitStops"
+            );
+        } else if (layer === "Dwellings") {
+            try {
+                map.removeLayer("ctPolygon");
+                map.removeSource("ctPolygon");
+            } catch {}
+            map.setPaintProperty("mapbox-satellite", "raster-opacity", 0.011);
+            map.addLayer(
+                {
+                    id: "ctPolygon",
+                    type: "fill",
+                    source: {
+                        type: "geojson",
+                        data: ctPolygon,
+                    },
+                    paint: {
+                        "fill-outline-color": "white",
+                        "fill-opacity": 0.881,
+                        "fill-color": [
+                            "case",
+                            ["!=", ["get", "Dwellings"], null],
+                            [
+                                "step",
+                                ["get", "Dwellings"],
+                                choropleths["dwellings"].colours[0],
+                                choropleths["dwellings"].breaks[0],
+                                choropleths["dwellings"].colours[1],
+                                choropleths["dwellings"].breaks[1],
+                                choropleths["dwellings"].colours[2],
+                                choropleths["dwellings"].breaks[2],
+                                choropleths["dwellings"].colours[3],
                             ],
                             "#cbcbcb",
                         ],
@@ -579,6 +663,58 @@
                 </div>
 
                 {/if}
+
+
+                {#if mapSelected === "Median Household Income"}
+                
+                <div id="legend-wrapper">
+                    <svg id="legend-svg" height="130">
+                    
+                        <rect class="legend-box" x="10" y="30" width="15" height="15" fill="{choropleths["median-household-income"].colours[3]}" />
+                        <text x="30" y="42" class="legend-text" font-size="12" >250,000 CAD and up</text>
+                            
+                        <rect class="legend-box" x="10" y="50" width="15" height="15" fill="{choropleths["median-household-income"].colours[2]}" />
+                        <text x="30" y="62" class="legend-text" font-size="12" >150,000 CAD to 250,000 CAD</text>
+    
+                        <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["median-household-income"].colours[1]}" />
+                        <text x="30" y="82" class="legend-text" font-size="12" >90,000 CAD to 150,000 CAD</text>
+    
+                        <rect class="legend-box" x="10" y="90" width="15" height="15" fill="{choropleths["median-household-income"].colours[0]}" />
+                        <text x="30" y="102" class="legend-text" font-size="12" >less than 90,000 CAD</text>
+    
+                        <rect class="legend-box" x="10" y="110" width="15" height="15" fill="#D0D1C9" />
+                        <text x="30" y="122" class="legend-text" font-size="12" >No Data: </text>
+    
+                    </svg>
+                </div>
+
+                {/if}
+
+                {#if mapSelected === "Dwellings"}
+                
+                <div id="legend-wrapper">
+                    <svg id="legend-svg" height="130">
+                    
+                        <rect class="legend-box" x="10" y="30" width="15" height="15" fill="{choropleths["dwellings"].colours[3]}" />
+                        <text x="30" y="42" class="legend-text" font-size="12" >4,000 units</text>
+                            
+                        <rect class="legend-box" x="10" y="50" width="15" height="15" fill="{choropleths["dwellings"].colours[2]}" />
+                        <text x="30" y="62" class="legend-text" font-size="12" >2,000 to 4,000 units</text>
+    
+                        <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["dwellings"].colours[1]}" />
+                        <text x="30" y="82" class="legend-text" font-size="12" >100 to 2,000 units</text>
+    
+                        <rect class="legend-box" x="10" y="90" width="15" height="15" fill="{choropleths["dwellings"].colours[0]}" />
+                        <text x="30" y="102" class="legend-text" font-size="12" >less than 100 units</text>
+    
+                        <rect class="legend-box" x="10" y="110" width="15" height="15" fill="#D0D1C9" />
+                        <text x="30" y="122" class="legend-text" font-size="12" >No Data: </text>
+    
+                    </svg>
+                </div>
+
+                {/if}
+
 
                 <p>
                     Map created by Jeff Allen at the School of Cities. Data
