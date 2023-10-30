@@ -4,22 +4,32 @@
     import { onMount } from "svelte";
     import Select from "svelte-select";
     import mapboxgl from "mapbox-gl";
-    import * as topojson from "topojson-client";
-    import { csv } from "d3-fetch";
     mapboxgl.accessToken =
         "pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A";
+    import * as topojson from "topojson-client";
+    import { csv } from "d3-fetch";
     // data
     import cmaSummary from "../assets/cma-summary.json";
     import cmaPoints from "../assets/cma-points.geo.json";
     import transitLines from "../assets/transit-lines-canada.geo.json";
     import transitStops from "../assets/transit-stops-canada.geo.json";
     import municipalLabels from "../assets/csd-2021-centroids.geo.json";
+    // logo
+    import metroMindsetLogo from "../assets/metro-mindset-logo.svg";
 
     // initial variables
+    let pageWidth;
     let cmaSelected = "Toronto";
     let cmauidSelected = 535;
     let map;
     let ctDataTable;
+
+    let imgWidth = 142;
+    $: if (pageWidth < (142 + 250)) {
+        imgWidth = pageWidth - 250 - 1;
+    } else {
+        imgWidth = 142;
+    }
 
     // toggle for if the panel is visible or not
 
@@ -99,7 +109,15 @@
 
     // Changing the map layer
 
-    let mapLayers = ["Street Map", "Satellite", "Population Density", "Dwelling Density", "Median Household Income", "Core Housing Need",  "Recent Immigrant Population"];
+    let mapLayers = [
+        "Street Map",
+        "Satellite",
+        "Population Density",
+        "Dwelling Density",
+        "Median Household Income",
+        "Core Housing Need",
+        "Recent Immigrant Population",
+    ];
     let mapSelected = "Street Map";
 
     const choropleths = {
@@ -135,12 +153,10 @@
             name: "Recent Immigrant Population",
             breaks: [0.1, 0.15, 0.2],
             colours: ["#f0fbff", "#c5eaf8", "#99d8f1", "#6fc7ea"],
-        }
+        },
     };
 
-    console.log(choropleths["population-density"].colours[0])
-
-    
+    console.log(choropleths["population-density"].colours[0]);
 
     function layerSelect(e) {
         $: mapSelected = e.detail.value;
@@ -223,15 +239,24 @@
                             [
                                 "step",
                                 ["get", "MedHhldIncome"],
-                                choropleths["median-household-income"].colours[0],
-                                choropleths["median-household-income"].breaks[0],
-                                choropleths["median-household-income"].colours[1],
-                                choropleths["median-household-income"].breaks[1],
-                                choropleths["median-household-income"].colours[2],
-                                choropleths["median-household-income"].breaks[2],
-                                choropleths["median-household-income"].colours[3],
-                                choropleths["median-household-income"].breaks[3],
-                                choropleths["median-household-income"].colours[4],
+                                choropleths["median-household-income"]
+                                    .colours[0],
+                                choropleths["median-household-income"]
+                                    .breaks[0],
+                                choropleths["median-household-income"]
+                                    .colours[1],
+                                choropleths["median-household-income"]
+                                    .breaks[1],
+                                choropleths["median-household-income"]
+                                    .colours[2],
+                                choropleths["median-household-income"]
+                                    .breaks[2],
+                                choropleths["median-household-income"]
+                                    .colours[3],
+                                choropleths["median-household-income"]
+                                    .breaks[3],
+                                choropleths["median-household-income"]
+                                    .colours[4],
                             ],
                             "#cbcbcb",
                         ],
@@ -383,7 +408,7 @@
                                 choropleths["perc-rec-immig"].breaks[1],
                                 choropleths["perc-rec-immig"].colours[2],
                                 choropleths["perc-rec-immig"].breaks[2],
-                                choropleths["perc-rec-immig"].colours[3]
+                                choropleths["perc-rec-immig"].colours[3],
                             ],
                             "#cbcbcb",
                         ],
@@ -393,7 +418,6 @@
             );
         }
     }
-
 
     // getting the ctPolygon data and join ctData for the selected CMA
 
@@ -658,8 +682,16 @@
 </svelte:head>
 
 <main>
+
+    <div class="logo">
+        <a href="https://schoolofcities.utoronto.ca/the-metropolitan-mindset//"
+            ><img src={metroMindsetLogo} alt="Metropolitan Mindset" width="{imgWidth}"/></a
+        >
+    </div>
+
     <div id="content">
-        <h1>Metropolitan Mindset</h1>
+
+        <h1>Metropolitan Mindset Map</h1>
 
         <div class="bar" />
 
@@ -774,176 +806,618 @@
 
             <div class="legend">
                 {#if mapSelected === "Population Density"}
+                    <div id="legend-wrapper">
+                        <svg id="legend-svg" height="110">
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="10"
+                                width="15"
+                                height="15"
+                                fill={choropleths["population-density"]
+                                    .colours[3]}
+                            />
+                            <text
+                                x="30"
+                                y="22"
+                                class="legend-text"
+                                font-size="12">6,000 people/km2 and up</text
+                            >
 
-                <div id="legend-wrapper">
-                    <svg id="legend-svg" height="110">
-                    
-                        <rect class="legend-box" x="10" y="10" width="15" height="15" fill="{choropleths["population-density"].colours[3]}" />
-                        <text x="30" y="22" class="legend-text" font-size="12" >6,000 people/km2 and up</text>
-                            
-                        <rect class="legend-box" x="10" y="30" width="15" height="15" fill="{choropleths["population-density"].colours[2]}" />
-                        <text x="30" y="42" class="legend-text" font-size="12" >3,000 to 6,000 people/km2</text>
-    
-                        <rect class="legend-box" x="10" y="50" width="15" height="15" fill="{choropleths["population-density"].colours[1]}" />
-                        <text x="30" y="62" class="legend-text" font-size="12" >500 to 3,000 people/km2</text>
-    
-                        <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["population-density"].colours[0]}" />
-                        <text x="30" y="82" class="legend-text" font-size="12" >Less than 500 people/km2</text>
-    
-                        <rect class="legend-box" x="10" y="90" width="15" height="15" fill="#D0D1C9" />
-                        <text x="30" y="102" class="legend-text" font-size="12" >No Data</text>
-    
-                    </svg>
-                </div>
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="30"
+                                width="15"
+                                height="15"
+                                fill={choropleths["population-density"]
+                                    .colours[2]}
+                            />
+                            <text
+                                x="30"
+                                y="42"
+                                class="legend-text"
+                                font-size="12">3,000 to 6,000 people/km2</text
+                            >
 
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="50"
+                                width="15"
+                                height="15"
+                                fill={choropleths["population-density"]
+                                    .colours[1]}
+                            />
+                            <text
+                                x="30"
+                                y="62"
+                                class="legend-text"
+                                font-size="12">500 to 3,000 people/km2</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="70"
+                                width="15"
+                                height="15"
+                                fill={choropleths["population-density"]
+                                    .colours[0]}
+                            />
+                            <text
+                                x="30"
+                                y="82"
+                                class="legend-text"
+                                font-size="12">Less than 500 people/km2</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="90"
+                                width="15"
+                                height="15"
+                                fill="#D0D1C9"
+                            />
+                            <text
+                                x="30"
+                                y="102"
+                                class="legend-text"
+                                font-size="12">No Data</text
+                            >
+                        </svg>
+                    </div>
                 {/if}
 
                 {#if mapSelected === "Median Household Income"}
-                
-                <div id="legend-wrapper">
-                    <svg id="legend-svg" height="145">
-                    
-                        <rect class="legend-box" x="10" y="10" width="15" height="15" fill="{choropleths["median-household-income"].colours[4]}" />
-                        <text x="30" y="22" class="legend-text" font-size="12" >$150,000 and up</text>
+                    <div id="legend-wrapper">
+                        <svg id="legend-svg" height="145">
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="10"
+                                width="15"
+                                height="15"
+                                fill={choropleths["median-household-income"]
+                                    .colours[4]}
+                            />
+                            <text
+                                x="30"
+                                y="22"
+                                class="legend-text"
+                                font-size="12">$150,000 and up</text
+                            >
 
-                        <rect class="legend-box" x="10" y="30" width="15" height="15" fill="{choropleths["median-household-income"].colours[3]}" />
-                        <text x="30" y="42" class="legend-text" font-size="12" >$100,000 to $150,000</text>
-                            
-                        <rect class="legend-box" x="10" y="50" width="15" height="15" fill="{choropleths["median-household-income"].colours[2]}" />
-                        <text x="30" y="62" class="legend-text" font-size="12" >$75,000 to $100,000</text>
-    
-                        <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["median-household-income"].colours[1]}" />
-                        <text x="30" y="82" class="legend-text" font-size="12" >$50,000 to $75,000</text>
-    
-                        <rect class="legend-box" x="10" y="90" width="15" height="15" fill="{choropleths["median-household-income"].colours[0]}" />
-                        <text x="30" y="102" class="legend-text" font-size="12" >Less than $50,000</text>
-    
-                        <rect class="legend-box" x="10" y="110" width="15" height="15" fill="#D0D1C9" />
-                        <text x="30" y="122" class="legend-text" font-size="12" >No Data</text>
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="30"
+                                width="15"
+                                height="15"
+                                fill={choropleths["median-household-income"]
+                                    .colours[3]}
+                            />
+                            <text
+                                x="30"
+                                y="42"
+                                class="legend-text"
+                                font-size="12">$100,000 to $150,000</text
+                            >
 
-                        <text x="10" y="142" class="legend-text" font-size="12" >(all $ values are based on before-tax income)</text>
-                        
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="50"
+                                width="15"
+                                height="15"
+                                fill={choropleths["median-household-income"]
+                                    .colours[2]}
+                            />
+                            <text
+                                x="30"
+                                y="62"
+                                class="legend-text"
+                                font-size="12">$75,000 to $100,000</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="70"
+                                width="15"
+                                height="15"
+                                fill={choropleths["median-household-income"]
+                                    .colours[1]}
+                            />
+                            <text
+                                x="30"
+                                y="82"
+                                class="legend-text"
+                                font-size="12">$50,000 to $75,000</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="90"
+                                width="15"
+                                height="15"
+                                fill={choropleths["median-household-income"]
+                                    .colours[0]}
+                            />
+                            <text
+                                x="30"
+                                y="102"
+                                class="legend-text"
+                                font-size="12">Less than $50,000</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="110"
+                                width="15"
+                                height="15"
+                                fill="#D0D1C9"
+                            />
+                            <text
+                                x="30"
+                                y="122"
+                                class="legend-text"
+                                font-size="12">No Data</text
+                            >
+
+                            <text
+                                x="10"
+                                y="142"
+                                class="legend-text"
+                                font-size="12"
+                                >(all $ values are based on before-tax income)</text
+                            >
                         </svg>
-                </div>
-
+                    </div>
                 {/if}
 
                 {#if mapSelected === "Dwelling Density"}
-                
-                <div id="legend-wrapper">
-                    <svg id="legend-svg" height="110">
+                    <div id="legend-wrapper">
+                        <svg id="legend-svg" height="110">
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="10"
+                                width="15"
+                                height="15"
+                                fill={choropleths["dwellings-density"]
+                                    .colours[3]}
+                            />
+                            <text
+                                x="30"
+                                y="22"
+                                class="legend-text"
+                                font-size="12">2,000 dwellings/km2 and up</text
+                            >
 
-                        <rect class="legend-box" x="10" y="10" width="15" height="15" fill="{choropleths["dwellings-density"].colours[3]}" />
-                        <text x="30" y="22" class="legend-text" font-size="12" >2,000 dwellings/km2 and up</text>
-                            
-                        <rect class="legend-box" x="10" y="30" width="15" height="15" fill="{choropleths["dwellings-density"].colours[2]}" />
-                        <text x="30" y="42" class="legend-text" font-size="12" >1,000 to 2,000 dwellings/km2</text>
-    
-                        <rect class="legend-box" x="10" y="50" width="15" height="15" fill="{choropleths["dwellings-density"].colours[1]}" />
-                        <text x="30" y="62" class="legend-text" font-size="12" >100 to 1,000 dwellings/km2</text>
-    
-                        <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["dwellings-density"].colours[0]}" />
-                        <text x="30" y="82" class="legend-text" font-size="12" >Less than 100 dwellings/km2</text>
-    
-                        <rect class="legend-box" x="10" y="90" width="15" height="15" fill="#D0D1C9" />
-                        <text x="30" y="102" class="legend-text" font-size="12" >No Data</text>
-    
-                    </svg>
-                    
-                </div>
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="30"
+                                width="15"
+                                height="15"
+                                fill={choropleths["dwellings-density"]
+                                    .colours[2]}
+                            />
+                            <text
+                                x="30"
+                                y="42"
+                                class="legend-text"
+                                font-size="12"
+                                >1,000 to 2,000 dwellings/km2</text
+                            >
 
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="50"
+                                width="15"
+                                height="15"
+                                fill={choropleths["dwellings-density"]
+                                    .colours[1]}
+                            />
+                            <text
+                                x="30"
+                                y="62"
+                                class="legend-text"
+                                font-size="12">100 to 1,000 dwellings/km2</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="70"
+                                width="15"
+                                height="15"
+                                fill={choropleths["dwellings-density"]
+                                    .colours[0]}
+                            />
+                            <text
+                                x="30"
+                                y="82"
+                                class="legend-text"
+                                font-size="12">Less than 100 dwellings/km2</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="90"
+                                width="15"
+                                height="15"
+                                fill="#D0D1C9"
+                            />
+                            <text
+                                x="30"
+                                y="102"
+                                class="legend-text"
+                                font-size="12">No Data</text
+                            >
+                        </svg>
+                    </div>
                 {/if}
 
                 {#if mapSelected === "% of Renter"}
-                
-                <div id="legend-wrapper">
-                    <svg id="legend-svg" height="125">
-                    
-                        <rect class="legend-box" x="10" y="10" width="15" height="15" fill="{choropleths["perc-rent"].colours[4]}" />
-                        <text x="30" y="22" class="legend-text" font-size="12" >70% and up</text>
+                    <div id="legend-wrapper">
+                        <svg id="legend-svg" height="125">
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="10"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-rent"].colours[4]}
+                            />
+                            <text
+                                x="30"
+                                y="22"
+                                class="legend-text"
+                                font-size="12">70% and up</text
+                            >
 
-                        <rect class="legend-box" x="10" y="30" width="15" height="15" fill="{choropleths["perc-rent"].colours[3]}" />
-                        <text x="30" y="42" class="legend-text" font-size="12" >50% to 70%</text>
-                            
-                        <rect class="legend-box" x="10" y="50" width="15" height="15" fill="{choropleths["perc-rent"].colours[2]}" />
-                        <text x="30" y="62" class="legend-text" font-size="12" >35% to 50%</text>
-    
-                        <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["perc-rent"].colours[1]}" />
-                        <text x="30" y="82" class="legend-text" font-size="12" >20% to 35%</text>
-    
-                        <rect class="legend-box" x="10" y="90" width="15" height="15" fill="{choropleths["perc-rent"].colours[0]}" />
-                        <text x="30" y="102" class="legend-text" font-size="12" >less than 20%</text>
-    
-                        <rect class="legend-box" x="10" y="110" width="15" height="15" fill="#D0D1C9" />
-                        <text x="30" y="122" class="legend-text" font-size="12" >No Data</text>
-                        
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="30"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-rent"].colours[3]}
+                            />
+                            <text
+                                x="30"
+                                y="42"
+                                class="legend-text"
+                                font-size="12">50% to 70%</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="50"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-rent"].colours[2]}
+                            />
+                            <text
+                                x="30"
+                                y="62"
+                                class="legend-text"
+                                font-size="12">35% to 50%</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="70"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-rent"].colours[1]}
+                            />
+                            <text
+                                x="30"
+                                y="82"
+                                class="legend-text"
+                                font-size="12">20% to 35%</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="90"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-rent"].colours[0]}
+                            />
+                            <text
+                                x="30"
+                                y="102"
+                                class="legend-text"
+                                font-size="12">less than 20%</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="110"
+                                width="15"
+                                height="15"
+                                fill="#D0D1C9"
+                            />
+                            <text
+                                x="30"
+                                y="122"
+                                class="legend-text"
+                                font-size="12">No Data</text
+                            >
                         </svg>
-                </div>
-
+                    </div>
                 {/if}
 
                 {#if mapSelected === "Core Housing Need"}
-                
-                <div id="legend-wrapper">
-                    <svg id="legend-svg" height="145">
+                    <div id="legend-wrapper">
+                        <svg id="legend-svg" height="145">
+                            <text
+                                x="10"
+                                y="20"
+                                class="legend-text"
+                                font-size="12"
+                                >Percent of residents in <a
+                                    class="legend-text-a"
+                                    href="https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2022056-eng.htm"
+                                    target="_blank">Core Housing Need</a
+                                ></text
+                            >
 
-                        <text x="10" y="20" class="legend-text" font-size="12">Percent of residents in <a class="legend-text-a" href="https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2022056-eng.htm" target="_blank">Core Housing Need</a></text>
-                    
-                        <rect class="legend-box" x="10" y="30" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[4]}" />
-                        <text x="30" y="42" class="legend-text" font-size="12" >20% and up</text>
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="30"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-corehous-need"]
+                                    .colours[4]}
+                            />
+                            <text
+                                x="30"
+                                y="42"
+                                class="legend-text"
+                                font-size="12">20% and up</text
+                            >
 
-                        <rect class="legend-box" x="10" y="50" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[3]}" />
-                        <text x="30" y="62" class="legend-text" font-size="12" >15% to 20%</text>
-                            
-                        <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[2]}" />
-                        <text x="30" y="82" class="legend-text" font-size="12" >10% to 15%</text>
-    
-                        <rect class="legend-box" x="10" y="90" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[1]}" />
-                        <text x="30" y="102" class="legend-text" font-size="12" >5% to 10%</text>
-    
-                        <rect class="legend-box" x="10" y="110" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[0]}" />
-                        <text x="30" y="122" class="legend-text" font-size="12" >less than 5%</text>
-    
-                        <rect class="legend-box" x="10" y="130" width="15" height="15" fill="#D0D1C9" />
-                        <text x="30" y="142" class="legend-text" font-size="12" >No Data</text>
-                        
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="50"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-corehous-need"]
+                                    .colours[3]}
+                            />
+                            <text
+                                x="30"
+                                y="62"
+                                class="legend-text"
+                                font-size="12">15% to 20%</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="70"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-corehous-need"]
+                                    .colours[2]}
+                            />
+                            <text
+                                x="30"
+                                y="82"
+                                class="legend-text"
+                                font-size="12">10% to 15%</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="90"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-corehous-need"]
+                                    .colours[1]}
+                            />
+                            <text
+                                x="30"
+                                y="102"
+                                class="legend-text"
+                                font-size="12">5% to 10%</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="110"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-corehous-need"]
+                                    .colours[0]}
+                            />
+                            <text
+                                x="30"
+                                y="122"
+                                class="legend-text"
+                                font-size="12">less than 5%</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="130"
+                                width="15"
+                                height="15"
+                                fill="#D0D1C9"
+                            />
+                            <text
+                                x="30"
+                                y="142"
+                                class="legend-text"
+                                font-size="12">No Data</text
+                            >
                         </svg>
-                </div>
-
+                    </div>
                 {/if}
 
-
                 {#if mapSelected === "Recent Immigrant Population"}
-                
-                <div id="legend-wrapper">
-                    <svg id="legend-svg" height="135">
+                    <div id="legend-wrapper">
+                        <svg id="legend-svg" height="135">
+                            <text
+                                x="10"
+                                y="17"
+                                class="legend-text"
+                                font-size="12"
+                                >Percent of population that immigrated to</text
+                            >
+                            <text
+                                x="10"
+                                y="32"
+                                class="legend-text"
+                                font-size="12"
+                                >Canada between 2016 and 2021</text
+                            >
 
-                        <text x="10" y="17" class="legend-text" font-size="12">Percent of population that immigrated to</text>
-                        <text x="10" y="32" class="legend-text" font-size="12">Canada between 2016 and 2021</text>
-                    
-                        <rect class="legend-box" x="10" y="40" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[3]}" />
-                        <text x="30" y="52" class="legend-text" font-size="12" >25% and up</text>
-                            
-                        <rect class="legend-box" x="10" y="60" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[2]}" />
-                        <text x="30" y="72" class="legend-text" font-size="12" >15% to 25%</text>
-    
-                        <rect class="legend-box" x="10" y="80" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[1]}" />
-                        <text x="30" y="92" class="legend-text" font-size="12" >10% to 15%</text>
-    
-                        <rect class="legend-box" x="10" y="100" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[0]}" />
-                        <text x="30" y="112" class="legend-text" font-size="12" >Less than 10%</text>
-    
-                        <rect class="legend-box" x="10" y="120" width="15" height="15" fill="#D0D1C9" />
-                        <text x="30" y="132" class="legend-text" font-size="12" >No Data</text>
-                        
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="40"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-rec-immig"].colours[3]}
+                            />
+                            <text
+                                x="30"
+                                y="52"
+                                class="legend-text"
+                                font-size="12">20% and up</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="60"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-rec-immig"].colours[2]}
+                            />
+                            <text
+                                x="30"
+                                y="72"
+                                class="legend-text"
+                                font-size="12">15% to 20%</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="80"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-rec-immig"].colours[1]}
+                            />
+                            <text
+                                x="30"
+                                y="92"
+                                class="legend-text"
+                                font-size="12">10% to 15%</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="100"
+                                width="15"
+                                height="15"
+                                fill={choropleths["perc-rec-immig"].colours[0]}
+                            />
+                            <text
+                                x="30"
+                                y="112"
+                                class="legend-text"
+                                font-size="12">Less than 10%</text
+                            >
+
+                            <rect
+                                class="legend-box"
+                                x="10"
+                                y="120"
+                                width="15"
+                                height="15"
+                                fill="#D0D1C9"
+                            />
+                            <text
+                                x="30"
+                                y="132"
+                                class="legend-text"
+                                font-size="12">No Data</text
+                            >
                         </svg>
-                </div>
-
+                    </div>
                 {/if}
 
                 <p id="note">
-                    Map created by <a href="https://jamaps.github.io/about.html" target="_blank">Jeff Allen</a> and <a href="https://www.linkedin.com/in/irene-kcc/" target="_blank">Irene Chang</a> at the <a href="https://schoolofcities.utoronto.ca/" target="_blank">School of Cities</a>. 
-                    Data sources include <a href="https://www12.statcan.gc.ca/census-recensement/index-eng.cfm?MM=1" target="_blank">Statistics Canada (2021)</a>, <a href="https://www.openstreetmap.org" target="_blank">OpenStreetMap</a>, and <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>. Code and data for this map are on <a href="https://github.com/schoolofcities/metropolitan-mindset" target="_blank">GitHub</a>
+                    Map created by <a
+                        href="https://jamaps.github.io/about.html"
+                        target="_blank">Jeff Allen</a
+                    >
+                    and
+                    <a
+                        href="https://www.linkedin.com/in/irene-kcc/"
+                        target="_blank">Irene Chang</a
+                    >
+                    at the
+                    <a
+                        href="https://schoolofcities.utoronto.ca/"
+                        target="_blank">School of Cities</a
+                    >. Data sources include
+                    <a
+                        href="https://www12.statcan.gc.ca/census-recensement/index-eng.cfm?MM=1"
+                        target="_blank">Statistics Canada (2021)</a
+                    >,
+                    <a href="https://www.openstreetmap.org" target="_blank"
+                        >OpenStreetMap</a
+                    >, and
+                    <a href="https://www.mapbox.com/" target="_blank">Mapbox</a
+                    >. Code and data for this map are on
+                    <a
+                        href="https://github.com/schoolofcities/metropolitan-mindset"
+                        target="_blank">GitHub</a
+                    >
                 </p>
             </div>
 
@@ -959,7 +1433,7 @@
         </div>
     </div>
 
-    <div id="map" />
+    <div id="map" bind:clientWidth={pageWidth}/>
 </main>
 
 <style>
@@ -974,6 +1448,7 @@
         height: 100%;
     }
 
+
     #map {
         height: 100%;
         width: 100%;
@@ -981,14 +1456,33 @@
         z-index: -99;
     }
 
+    .logo {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: white;
+        border-bottom: solid 1px lightgrey;
+        border-right: solid 1px lightgrey;
+        border-radius: 0px;
+        z-index: 1;
+    }
+
+    .logo img {
+        /* width: 125px; */
+        opacity: 1;
+    }
+    .logo img:hover {
+        opacity: 0.7;
+    }
+
     h1 {
-        font-size: 24px;
+        font-size: 20px;
         font-family: TradeGothicBold;
         margin: 0px;
         padding: 10px;
         padding-bottom: 5px;
         font-weight: 600;
-        color: var(--brandPurple);
+        color: var(--brandBlack);
     }
 
     h2 {
@@ -1025,17 +1519,19 @@
         text-decoration: underline;
     }
     a:hover {
-        color: var(--brandMedGreen)
+        color: var(--brandMedGreen);
     }
+
+    
 
     #content {
         width: 250px;
         position: absolute;
         top: 0px;
-        left: 0px;
+        right: 0px;
         background-color: white;
         border-bottom: solid 1px lightgrey;
-        border-right: solid 1px lightgrey;
+        border-left: solid 1px lightgrey;
         border-radius: 0px;
         z-index: 1;
     }
@@ -1102,6 +1598,6 @@
         /* text-decoration: underline; */
     }
     .legend-text-a:hover {
-        fill: var(--brandMedGreen)
+        fill: var(--brandMedGreen);
     }
 </style>
