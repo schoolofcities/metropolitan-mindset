@@ -99,8 +99,7 @@
 
     // Changing the map layer
 
-    let mapLayers = ["Street Map", "Satellite", "Population Density", "Median Household Income", 
-                    "Dwellings Density", "% of Renter", "% of Core Housing Need", "% of Recent Immigrant"];
+    let mapLayers = ["Street Map", "Satellite", "Population Density", "Median Household Income", "Dwellings Density", "% of Renter", "% of Core Housing Need", "% of Recent Immigrant"];
     let mapSelected = "Street Map";
 
     const choropleths = {
@@ -461,10 +460,10 @@
         map = new mapboxgl.Map({
             container: "map",
             style: "mapbox://styles/schoolofcities/cllwjnzlf016j01p71qq5eskt",
-            center: [-79.6, 43.9],
-            zoom: 4,
+            center: [-100, 55],
+            zoom: 2.5,
             maxZoom: 12,
-            minZoom: 3,
+            minZoom: 1,
             projection: "globe",
             scrollZoom: true,
             attributionControl: false,
@@ -667,8 +666,7 @@
         <div class="bar" />
 
         <p>
-            This map is still under construction :) Add brief blurb about this
-            project here
+            This map is still under construction :) Add brief blurb about this project here
         </p>
 
         <div id="municipality-toggle">
@@ -792,7 +790,7 @@
                         <text x="30" y="62" class="legend-text" font-size="12" >500 to 3,000 people/km2</text>
     
                         <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["population-density"].colours[0]}" />
-                        <text x="30" y="82" class="legend-text" font-size="12" >less than 500 people/km2</text>
+                        <text x="30" y="82" class="legend-text" font-size="12" >Less than 500 people/km2</text>
     
                         <rect class="legend-box" x="10" y="90" width="15" height="15" fill="#D0D1C9" />
                         <text x="30" y="102" class="legend-text" font-size="12" >No Data</text>
@@ -820,7 +818,7 @@
                         <text x="30" y="82" class="legend-text" font-size="12" >50,000 CAD to 75,000 CAD</text>
     
                         <rect class="legend-box" x="10" y="90" width="15" height="15" fill="{choropleths["median-household-income"].colours[0]}" />
-                        <text x="30" y="102" class="legend-text" font-size="12" >less than 50,000 CAD</text>
+                        <text x="30" y="102" class="legend-text" font-size="12" >Less than 50,000 CAD</text>
     
                         <rect class="legend-box" x="10" y="110" width="15" height="15" fill="#D0D1C9" />
                         <text x="30" y="122" class="legend-text" font-size="12" >No Data</text>
@@ -845,7 +843,7 @@
                         <text x="30" y="62" class="legend-text" font-size="12" >100 to 2,000 units/km2</text>
     
                         <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["dwellings-density"].colours[0]}" />
-                        <text x="30" y="82" class="legend-text" font-size="12" >less than 100 units/km2</text>
+                        <text x="30" y="82" class="legend-text" font-size="12" >Less than 100 units/km2</text>
     
                         <rect class="legend-box" x="10" y="90" width="15" height="15" fill="#D0D1C9" />
                         <text x="30" y="102" class="legend-text" font-size="12" >No Data</text>
@@ -941,7 +939,7 @@
 
                 {/if}
 
-                <p>
+                <p id="note">
                     Map created by Jeff Allen and Irene Chang at the School of Cities. 
                     Data sources: Statistics Canada, OpenStreetMap, Mapbox
                 </p>
@@ -1014,6 +1012,10 @@
         padding-top: 6px;
         opacity: 1;
         color: var(--brandDarkBlueFade);
+    }
+
+    #note {
+        font-size: 10px;
     }
 
     a {
