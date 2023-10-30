@@ -1,6 +1,6 @@
 # metropolitan-mindset
 
-Maps and data on metropolitan regions in Canada
+Maps and data on metropolitan regions in Canada in support of this project: https://schoolofcities.utoronto.ca/the-metropolitan-mindset/
 
 ### Web Development
 
@@ -8,7 +8,7 @@ Installing and running locally:
 
 ```
 git clone https://github.com/schoolofcities/metropolitan-mindset
-cd historical-land-cover-toronto
+cd metropolitan-mindset
 npm install
 npm run dev
 ```
@@ -27,6 +27,8 @@ npm run preview
 
 
 ### Resources
+
+https://schoolofcities.utoronto.ca/the-metropolitan-mindset/
 
 https://www.youtube.com/watch?v=sGgGskq_ZA8
 

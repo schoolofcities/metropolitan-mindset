@@ -684,7 +684,7 @@
 <main>
 
     <div class="logo">
-        <a href="https://schoolofcities.utoronto.ca/the-metropolitan-mindset//"
+        <a href="https://schoolofcities.utoronto.ca/the-metropolitan-mindset/"
             ><img src={metroMindsetLogo} alt="Metropolitan Mindset" width="{imgWidth}"/></a
         >
     </div>
