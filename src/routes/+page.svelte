@@ -99,7 +99,7 @@
 
     // Changing the map layer
 
-    let mapLayers = ["Street Map", "Satellite", "Population Density", "Dwellings Density", "Median Household Income", "Core Housing Need", "Percent Rent",  "Percent Recent Immigrant"];
+    let mapLayers = ["Street Map", "Satellite", "Population Density", "Dwelling Density", "Median Household Income", "Core Housing Need", "Percent Rent",  "Percent Recent Immigrant"];
     let mapSelected = "Street Map";
 
     const choropleths = {
@@ -116,7 +116,7 @@
             //colours: ["#EDF1F7", "#C3D1E5", "#6F91C1", "#375681", "#1C2C42"],
         },
         "dwellings-density": {
-            name: "Dwellings Density",
+            name: "Dwelling Density",
             breaks: [100, 1000, 2000],
             colours: ["#fffef8", "#fbefb5", "#f7dd66", "#f1c500"],
         },
@@ -239,7 +239,7 @@
                 },
                 "transitStops"
             );
-        } else if (layer === "Dwellings Density") {
+        } else if (layer === "Dwelling Density") {
             try {
                 map.removeLayer("ctPolygon");
                 map.removeSource("ctPolygon");
@@ -830,7 +830,7 @@
 
                 {/if}
 
-                {#if mapSelected === "Dwellings Density"}
+                {#if mapSelected === "Dwelling Density"}
                 
                 <div id="legend-wrapper">
                     <svg id="legend-svg" height="110">
@@ -887,27 +887,27 @@
                 {#if mapSelected === "Core Housing Need"}
                 
                 <div id="legend-wrapper">
-                    <svg id="legend-svg" height="125">
+                    <svg id="legend-svg" height="145">
 
-                        <text x="30" y="0" class="legend-text" font-size="12" ></text>
+                        <text x="10" y="20" class="legend-text" font-size="12">Percent of residents in <a class="legend-text-a" href="https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2022056-eng.htm" target="_blank">Core Housing Need</a></text>
                     
-                        <rect class="legend-box" x="10" y="10" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[4]}" />
-                        <text x="30" y="22" class="legend-text" font-size="12" >20% and up</text>
+                        <rect class="legend-box" x="10" y="30" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[4]}" />
+                        <text x="30" y="42" class="legend-text" font-size="12" >20% and up</text>
 
-                        <rect class="legend-box" x="10" y="30" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[3]}" />
-                        <text x="30" y="42" class="legend-text" font-size="12" >15% to 20%</text>
+                        <rect class="legend-box" x="10" y="50" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[3]}" />
+                        <text x="30" y="62" class="legend-text" font-size="12" >15% to 20%</text>
                             
-                        <rect class="legend-box" x="10" y="50" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[2]}" />
-                        <text x="30" y="62" class="legend-text" font-size="12" >10% to 15%</text>
+                        <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[2]}" />
+                        <text x="30" y="82" class="legend-text" font-size="12" >10% to 15%</text>
     
-                        <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[1]}" />
-                        <text x="30" y="82" class="legend-text" font-size="12" >5% to 10%</text>
+                        <rect class="legend-box" x="10" y="90" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[1]}" />
+                        <text x="30" y="102" class="legend-text" font-size="12" >5% to 10%</text>
     
-                        <rect class="legend-box" x="10" y="90" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[0]}" />
-                        <text x="30" y="102" class="legend-text" font-size="12" >less than 5%</text>
+                        <rect class="legend-box" x="10" y="110" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[0]}" />
+                        <text x="30" y="122" class="legend-text" font-size="12" >less than 5%</text>
     
-                        <rect class="legend-box" x="10" y="110" width="15" height="15" fill="#D0D1C9" />
-                        <text x="30" y="122" class="legend-text" font-size="12" >No Data</text>
+                        <rect class="legend-box" x="10" y="130" width="15" height="15" fill="#D0D1C9" />
+                        <text x="30" y="142" class="legend-text" font-size="12" >No Data</text>
                         
                         </svg>
                 </div>
@@ -944,8 +944,8 @@
                 {/if}
 
                 <p id="note">
-                    Map created by Jeff Allen and Irene Chang at the School of Cities. 
-                    Data sources: Statistics Canada, OpenStreetMap, Mapbox
+                    Map created by <a href="https://jamaps.github.io/about.html" target="_blank">Jeff Allen</a> and <a href="https://www.linkedin.com/in/irene-kcc/" target="_blank">Irene Chang</a> at the <a href="https://schoolofcities.utoronto.ca/" target="_blank">School of Cities</a>. 
+                    Data sources include <a href="https://www12.statcan.gc.ca/census-recensement/index-eng.cfm?MM=1" target="_blank">Statistics Canada (2021)</a>, <a href="https://www.openstreetmap.org" target="_blank">OpenStreetMap</a>, and <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>. Code and data for this map are on <a href="https://github.com/schoolofcities/metropolitan-mindset" target="_blank">GitHub</a>
                 </p>
             </div>
 
@@ -1023,7 +1023,11 @@
     }
 
     a {
-        color: var(--brandMedBlue);
+        color: var(--brandDarkGreen);
+        text-decoration: underline;
+    }
+    a:hover {
+        color: var(--brandMedGreen)
     }
 
     #content {
@@ -1092,5 +1096,13 @@
     .legend-text {
         font-family: RobotoRegular;
         fill: var(--brandDarkBlueFade);
+    }
+
+    .legend-text-a {
+        fill: var(--brandDarkGreen);
+        /* text-decoration: underline; */
+    }
+    .legend-text-a:hover {
+        fill: var(--brandMedGreen)
     }
 </style>
