@@ -99,7 +99,7 @@
 
     // Changing the map layer
 
-    let mapLayers = ["Street Map", "Satellite", "Population Density", "Dwelling Density", "Median Household Income", "Core Housing Need", "Percent Rent",  "Percent Recent Immigrant"];
+    let mapLayers = ["Street Map", "Satellite", "Population Density", "Dwelling Density", "Median Household Income", "Core Housing Need", "Percent Rent",  "Recent Immigrant Population"];
     let mapSelected = "Street Map";
 
     const choropleths = {
@@ -132,9 +132,9 @@
             //colours: ["#ECF3EF", "#B5D0C1", "#7EAD93", "#518066", "#2E493A"],
         },
         "perc-rec-immig": {
-            name: "% of Recent Immigrant",
-            breaks: [0.05, 0.085, 0.13, 0.2],
-            colours: ["#F5EDE9", "#D9BAAB", "#BD876D", "#8F5A41", "#00a189"],
+            name: "Recent Immigrant Population",
+            breaks: [0.1, 0.2, 0.3],
+            colours: ["#f0fbff", "#c5eaf8", "#99d8f1", "#6fc7ea"],
         }
     };
 
@@ -354,7 +354,7 @@
                 },
                 "transitStops"
             );
-        } else if (layer === "% of Recent Immigrant") {
+        } else if (layer === "Recent Immigrant Population") {
             try {
                 map.removeLayer("ctPolygon");
                 map.removeSource("ctPolygon");
@@ -383,9 +383,7 @@
                                 choropleths["perc-rec-immig"].breaks[1],
                                 choropleths["perc-rec-immig"].colours[2],
                                 choropleths["perc-rec-immig"].breaks[2],
-                                choropleths["perc-rec-immig"].colours[3],
-                                choropleths["perc-rec-immig"].breaks[3],
-                                choropleths["perc-rec-immig"].colours[4],
+                                choropleths["perc-rec-immig"].colours[3]
                             ],
                             "#cbcbcb",
                         ],
@@ -915,28 +913,28 @@
                 {/if}
 
 
-                {#if mapSelected === "% of Recent Immigrant"}
+                {#if mapSelected === "Recent Immigrant Population"}
                 
                 <div id="legend-wrapper">
-                    <svg id="legend-svg" height="125">
-                    
-                        <rect class="legend-box" x="10" y="10" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[4]}" />
-                        <text x="30" y="22" class="legend-text" font-size="12" >20% and up</text>
+                    <svg id="legend-svg" height="135">
 
-                        <rect class="legend-box" x="10" y="30" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[3]}" />
-                        <text x="30" y="42" class="legend-text" font-size="12" >13% to 20%</text>
+                        <text x="10" y="17" class="legend-text" font-size="12">Percent of population that immigrated to</text>
+                        <text x="10" y="32" class="legend-text" font-size="12">Canada between 2016 and 2021</text>
+                    
+                        <rect class="legend-box" x="10" y="40" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[3]}" />
+                        <text x="30" y="52" class="legend-text" font-size="12" >13% to 20%</text>
                             
-                        <rect class="legend-box" x="10" y="50" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[2]}" />
-                        <text x="30" y="62" class="legend-text" font-size="12" >0.85% to 13%</text>
+                        <rect class="legend-box" x="10" y="60" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[2]}" />
+                        <text x="30" y="72" class="legend-text" font-size="12" >0.85% to 13%</text>
     
-                        <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[1]}" />
-                        <text x="30" y="82" class="legend-text" font-size="12" >0.5% to 0.85%</text>
+                        <rect class="legend-box" x="10" y="80" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[1]}" />
+                        <text x="30" y="92" class="legend-text" font-size="12" >0.5% to 0.85%</text>
     
-                        <rect class="legend-box" x="10" y="90" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[0]}" />
-                        <text x="30" y="102" class="legend-text" font-size="12" >less than 0.5%</text>
+                        <rect class="legend-box" x="10" y="100" width="15" height="15" fill="{choropleths["perc-rec-immig"].colours[0]}" />
+                        <text x="30" y="112" class="legend-text" font-size="12" >less than 0.5%</text>
     
-                        <rect class="legend-box" x="10" y="110" width="15" height="15" fill="#D0D1C9" />
-                        <text x="30" y="122" class="legend-text" font-size="12" >No Data</text>
+                        <rect class="legend-box" x="10" y="120" width="15" height="15" fill="#D0D1C9" />
+                        <text x="30" y="132" class="legend-text" font-size="12" >No Data</text>
                         
                         </svg>
                 </div>
