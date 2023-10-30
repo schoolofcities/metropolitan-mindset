@@ -112,7 +112,7 @@
         "median-household-income": {
             name: "Median Household Income",
             breaks: [50000, 75000, 100000, 150000],
-            colours: ["#FAF8F2", "#E9E1C7", "#D0BE86", "#B59A46", "#74632D"],
+            colours: ["#e07260", "#e6b8a9", "#eaeee0", "#a8d8c8", "#3db5a0"],
             //colours: ["#EDF1F7", "#C3D1E5", "#6F91C1", "#375681", "#1C2C42"],
         },
         "dwellings-density": {
@@ -546,7 +546,7 @@
                             20,
                             10,
                         ],
-                        "circle-color": "#8DBF2E",
+                        "circle-color": "#8a8783",
                     },
                 },
                 "bridge-minor-case"
@@ -574,7 +574,7 @@
                             10,
                             2,
                         ],
-                        "line-color": "#8DBF2E",
+                        "line-color": "#8a8783",
                     },
                 },
                 "bridge-minor-case"
