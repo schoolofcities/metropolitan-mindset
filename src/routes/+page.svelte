@@ -99,7 +99,7 @@
 
     // Changing the map layer
 
-    let mapLayers = ["Street Map", "Satellite", "Population Density", "Dwellings Density", "Median Household Income",  "Percent Rent", "Percent in Core Housing Need", "Percent Recent Immigrant"];
+    let mapLayers = ["Street Map", "Satellite", "Population Density", "Dwellings Density", "Median Household Income", "Core Housing Need", "Percent Rent",  "Percent Recent Immigrant"];
     let mapSelected = "Street Map";
 
     const choropleths = {
@@ -126,15 +126,15 @@
             colours: ["#FAF8F2", "#E9E1C7", "#D0BE86", "#B59A46", "#74632D"],
         },
         "perc-corehous-need": {
-            name: "% of Core Housing Need",
-            breaks: [0.06, 0.1, 0.16, 0.2],
-            colours: ["#EBDEE0", "#C9A6AB", "#A76E76", "#74474D", "#3C2528"],
+            name: "Core Housing Need",
+            breaks: [0.05, 0.1, 0.15, 0.2],
+            colours: ["#fff", "#fcf1f0", "#f5cdc8", "#ec9f95", "#e47364"],
             //colours: ["#ECF3EF", "#B5D0C1", "#7EAD93", "#518066", "#2E493A"],
         },
         "perc-rec-immig": {
             name: "% of Recent Immigrant",
             breaks: [0.05, 0.085, 0.13, 0.2],
-            colours: ["#F5EDE9", "#D9BAAB", "#BD876D", "#8F5A41", "#513325"],
+            colours: ["#F5EDE9", "#D9BAAB", "#BD876D", "#8F5A41", "#00a189"],
         }
     };
 
@@ -315,7 +315,7 @@
                 },
                 "transitStops"
             );
-        } else if (layer === "% of Core Housing Need") {
+        } else if (layer === "Core Housing Need") {
             try {
                 map.removeLayer("ctPolygon");
                 map.removeSource("ctPolygon");
@@ -823,7 +823,7 @@
                         <rect class="legend-box" x="10" y="110" width="15" height="15" fill="#D0D1C9" />
                         <text x="30" y="122" class="legend-text" font-size="12" >No Data</text>
 
-                        <text x="10" y="142" class="legend-text" font-size="12" >(all $ values are based on after-tax income)</text>
+                        <text x="10" y="142" class="legend-text" font-size="12" >(all $ values are based on before-tax income)</text>
                         
                         </svg>
                 </div>
@@ -884,25 +884,27 @@
 
                 {/if}
 
-                {#if mapSelected === "% of Core Housing Need"}
+                {#if mapSelected === "Core Housing Need"}
                 
                 <div id="legend-wrapper">
                     <svg id="legend-svg" height="125">
+
+                        <text x="30" y="0" class="legend-text" font-size="12" ></text>
                     
                         <rect class="legend-box" x="10" y="10" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[4]}" />
                         <text x="30" y="22" class="legend-text" font-size="12" >20% and up</text>
 
                         <rect class="legend-box" x="10" y="30" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[3]}" />
-                        <text x="30" y="42" class="legend-text" font-size="12" >16% to 20%</text>
+                        <text x="30" y="42" class="legend-text" font-size="12" >15% to 20%</text>
                             
                         <rect class="legend-box" x="10" y="50" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[2]}" />
-                        <text x="30" y="62" class="legend-text" font-size="12" >10% to 16%</text>
+                        <text x="30" y="62" class="legend-text" font-size="12" >10% to 15%</text>
     
                         <rect class="legend-box" x="10" y="70" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[1]}" />
-                        <text x="30" y="82" class="legend-text" font-size="12" >0.6% to 10%</text>
+                        <text x="30" y="82" class="legend-text" font-size="12" >5% to 10%</text>
     
                         <rect class="legend-box" x="10" y="90" width="15" height="15" fill="{choropleths["perc-corehous-need"].colours[0]}" />
-                        <text x="30" y="102" class="legend-text" font-size="12" >less than 0.6%</text>
+                        <text x="30" y="102" class="legend-text" font-size="12" >less than 5%</text>
     
                         <rect class="legend-box" x="10" y="110" width="15" height="15" fill="#D0D1C9" />
                         <text x="30" y="122" class="legend-text" font-size="12" >No Data</text>
