@@ -19,7 +19,7 @@
 
     // initial variables
     let pageWidth;
-    let cmaSelected = "Toronto";
+    let cmaSelected = "";
     let cmauidSelected = 535;
     let map;
     let ctDataTable;
@@ -425,7 +425,7 @@
     async function loadCensusTract(cmauid) {
         if (cmauid === cmauidSelected) {
             try {
-                const response = await fetch(`ct-${cmauid}-2021.topo.json`);
+                const response = await fetch(`/metropolitan-mindset/ct-${cmauid}-2021.topo.json`);
                 ctPolygon = await response.json();
 
                 ctPolygon = topojson.feature(ctPolygon, `ct-${cmauid}-2021`);
@@ -464,7 +464,7 @@
     // Map setup and loading ct data table - happens on initial load of the page
 
     onMount(() => {
-        csv("/ct-data.csv")
+        csv("/metropolitan-mindset/ct-data.csv")
             .then((data) => {
                 data.forEach((row) => {
                     for (const key in row) {
@@ -541,7 +541,7 @@
             map.setFilter("municipalLabels", [
                 "match",
                 ["get", "CMAUID"],
-                ["535"],
+                [""],
                 true,
                 false,
             ]);
@@ -696,7 +696,8 @@
         <div class="bar" />
 
         <p>
-            This map is still under construction :) Add brief blurb about this project here
+            Created in support of <a href="https://schoolofcities.utoronto.ca/people/don-iveson/" target="_blank">Don Iveson</a>'s and <a href="https://munkschool.utoronto.ca/person/gabriel-eidelman" target="_blank">Gabriel Eidelman</a>'s <a href="https://schoolofcities.utoronto.ca/the-metropolitan-mindset/" target="_blank">Metropolitan Mindset Playbook</a> 
+            <!-- by <a href="https://schoolofcities.utoronto.ca/people/don-iveson/" target="_blank">Don Iveson</a> and <a href="https://munkschool.utoronto.ca/person/gabriel-eidelman" target="_blank">Gabriel Eidelman</a> -->
         </p>
 
         <div id="municipality-toggle">
@@ -1309,7 +1310,7 @@
                                 y="32"
                                 class="legend-text"
                                 font-size="12"
-                                >Canada between 2016 and 2021</text
+                                >Canada between 2011 and 2021</text
                             >
 
                             <rect
@@ -1391,7 +1392,7 @@
                 {/if}
 
                 <p id="note">
-                    Map created by <a
+                    Map designed and built by <a
                         href="https://jamaps.github.io/about.html"
                         target="_blank">Jeff Allen</a
                     >
@@ -1459,11 +1460,12 @@
     .logo {
         position: absolute;
         top: 0px;
-        left: 0px;
+        right: 0px;
         background-color: white;
         border-bottom: solid 1px lightgrey;
-        border-right: solid 1px lightgrey;
+        border-left: solid 1px lightgrey;
         border-radius: 0px;
+        border-bottom-left-radius: 10px;
         z-index: 1;
     }
 
@@ -1528,11 +1530,12 @@
         width: 250px;
         position: absolute;
         top: 0px;
-        right: 0px;
+        left: 0px;
         background-color: white;
         border-bottom: solid 1px lightgrey;
-        border-left: solid 1px lightgrey;
+        border-right: solid 1px lightgrey;
         border-radius: 0px;
+        border-bottom-right-radius: 10px;
         z-index: 1;
     }
 
