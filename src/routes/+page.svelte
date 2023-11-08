@@ -19,7 +19,7 @@
 
     // initial variables
     let pageWidth;
-    let cmaSelected = "Toronto";
+    let cmaSelected = "";
     let cmauidSelected = 535;
     let map;
     let ctDataTable;
@@ -541,7 +541,7 @@
             map.setFilter("municipalLabels", [
                 "match",
                 ["get", "CMAUID"],
-                ["535"],
+                [""],
                 true,
                 false,
             ]);
@@ -696,7 +696,8 @@
         <div class="bar" />
 
         <p>
-            This map is still under construction :) Add brief blurb about this project here
+            Created in support of <a href="https://schoolofcities.utoronto.ca/people/don-iveson/" target="_blank">Don Iveson</a>'s and <a href="https://munkschool.utoronto.ca/person/gabriel-eidelman" target="_blank">Gabriel Eidelman</a>'s <a href="https://schoolofcities.utoronto.ca/the-metropolitan-mindset/" target="_blank">Metropolitan Mindset Playbook</a> 
+            <!-- by <a href="https://schoolofcities.utoronto.ca/people/don-iveson/" target="_blank">Don Iveson</a> and <a href="https://munkschool.utoronto.ca/person/gabriel-eidelman" target="_blank">Gabriel Eidelman</a> -->
         </p>
 
         <div id="municipality-toggle">
@@ -1391,7 +1392,7 @@
                 {/if}
 
                 <p id="note">
-                    Map created by <a
+                    Map designed and built by <a
                         href="https://jamaps.github.io/about.html"
                         target="_blank">Jeff Allen</a
                     >
@@ -1464,6 +1465,7 @@
         border-bottom: solid 1px lightgrey;
         border-left: solid 1px lightgrey;
         border-radius: 0px;
+        border-bottom-left-radius: 10px;
         z-index: 1;
     }
 
@@ -1531,8 +1533,9 @@
         left: 0px;
         background-color: white;
         border-bottom: solid 1px lightgrey;
-        border-left: solid 1px lightgrey;
+        border-right: solid 1px lightgrey;
         border-radius: 0px;
+        border-bottom-right-radius: 10px;
         z-index: 1;
     }
 
