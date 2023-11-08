@@ -425,7 +425,7 @@
     async function loadCensusTract(cmauid) {
         if (cmauid === cmauidSelected) {
             try {
-                const response = await fetch(`ct-${cmauid}-2021.topo.json`);
+                const response = await fetch(`/metropolitan-mindset/ct-${cmauid}-2021.topo.json`);
                 ctPolygon = await response.json();
 
                 ctPolygon = topojson.feature(ctPolygon, `ct-${cmauid}-2021`);
@@ -464,7 +464,7 @@
     // Map setup and loading ct data table - happens on initial load of the page
 
     onMount(() => {
-        csv("/ct-data.csv")
+        csv("/metropolitan-mindset/ct-data.csv")
             .then((data) => {
                 data.forEach((row) => {
                     for (const key in row) {
@@ -1309,7 +1309,7 @@
                                 y="32"
                                 class="legend-text"
                                 font-size="12"
-                                >Canada between 2016 and 2021</text
+                                >Canada between 2011 and 2021</text
                             >
 
                             <rect
@@ -1459,10 +1459,10 @@
     .logo {
         position: absolute;
         top: 0px;
-        left: 0px;
+        right: 0px;
         background-color: white;
         border-bottom: solid 1px lightgrey;
-        border-right: solid 1px lightgrey;
+        border-left: solid 1px lightgrey;
         border-radius: 0px;
         z-index: 1;
     }
@@ -1528,7 +1528,7 @@
         width: 250px;
         position: absolute;
         top: 0px;
-        right: 0px;
+        left: 0px;
         background-color: white;
         border-bottom: solid 1px lightgrey;
         border-left: solid 1px lightgrey;
