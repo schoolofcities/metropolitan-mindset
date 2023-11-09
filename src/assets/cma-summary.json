@@ -1,4 +1,25 @@
 [
+  {
+    "Rank": 999,
+    "CMAUID": 0,
+    "CMANAME": "NA",
+    "Population_2021": "NA",
+    "Dwellings_2021": "NA",
+    "Households_2021": "NA",
+    "Labour_Force_2021": "NA",
+    "Median_Individual_Income_2020_(before_tax)": "NA",
+    "Median_Household_Income_2020_(before_tax)": "NA",
+    "GDP_2019_(millions)": "NA",
+    "Total_Number_of_Municipalities": "NA",
+    "Proportion_of_Population_In_Central": "NA",
+    "Central_City_CSDUID": "NA",
+    "Central_City_CSDNAME": "NA",
+    "CSDTYPE": "NA",
+    "Central_City_Population_2021": "NA",
+    "Land_Area_(sq_km)":"NA",
+    "x": "NA",
+    "y": "NA"
+  },
  {
    "Rank": 1,
    "CMAUID": 535,

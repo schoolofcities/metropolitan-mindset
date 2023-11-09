@@ -24,11 +24,11 @@
     let map;
     let ctDataTable;
 
-    let imgWidth = 142;
-    $: if (pageWidth < (142 + 250)) {
+    let imgWidth = 102;
+    $: if (pageWidth < (102 + 250)) {
         imgWidth = pageWidth - 250 - 1;
     } else {
-        imgWidth = 142;
+        imgWidth = 102;
     }
 
     // toggle for if the panel is visible or not
@@ -741,6 +741,7 @@
 
             <div class="bar" />
 
+            {#if cmaSelected !== ""}
             <p>
                 Number of Municipalities: <span id="number"
                     >{filteredData["Total_Number_of_Municipalities"]}</span
@@ -774,6 +775,7 @@
                     ]}%</span
                 >
             </p>
+            {/if}
 
             <p>
                 <i>Select to switch between map layers:</i>
@@ -1465,7 +1467,7 @@
         border-bottom: solid 1px lightgrey;
         border-left: solid 1px lightgrey;
         border-radius: 0px;
-        border-bottom-left-radius: 10px;
+        border-bottom-left-radius: 8px;
         z-index: 1;
     }
 
@@ -1535,7 +1537,7 @@
         border-bottom: solid 1px lightgrey;
         border-right: solid 1px lightgrey;
         border-radius: 0px;
-        border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 8px;
         z-index: 1;
     }
 
