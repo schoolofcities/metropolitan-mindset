@@ -5,7 +5,7 @@
     import Select from "svelte-select";
     import mapboxgl from "mapbox-gl";
     mapboxgl.accessToken =
-        "pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w2Z2xhOXprMTYzczNlcHNjMnNvdGlmNCJ9.lOgVHrajc1L-LlU0as2i2A";
+        "pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2xveWV1ZGZhMDM0bzJpczJxcXBxdGVzciJ9.DSq6ynr1MUplx1h4l0iDqw";
     import * as topojson from "topojson-client";
     import { csv } from "d3-fetch";
     // data
